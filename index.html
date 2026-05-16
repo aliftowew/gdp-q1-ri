@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>5,61% — Asalnya Jelas. Kritiknya Bagaimana?</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<style>
+  :root {
+    --cream: #F7F3EA; --cream-soft: #FAF7F0; --cream-deep: #F0E9D8;
+    --ink: #1A1815; --ink-soft: #3D3934; --ink-mute: #6D6760; --ink-faint: #A39B91;
+    --border: #D9D1C2; --border-soft: #E8E1D2;
+    --rust: #9C5A3F; --gold: #B8893A; --teal: #4B7B6A; --crimson: #7A2E2E;
+    --highlight: #F5E8CC; --green-tint: #E8EDD6;
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream); color: var(--ink);
+    font-family: var(--font-body); font-weight: 400; line-height: 1.65;
+    font-size: 17px;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 80px 32px 120px; }
+
+  .hero { border-bottom: 1px solid var(--border); padding-bottom: 56px; margin-bottom: 56px; }
+  .hero-tag {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--rust); margin-bottom: 24px; font-weight: 500;
+  }
+  h1.hero-title {
+    font-family: var(--font-display); font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-weight: 400; font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.02; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 24px;
+  }
+  h1 em { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; color: var(--rust); }
+  .hero-subtitle { font-size: 19px; line-height: 1.55; color: var(--ink-soft); max-width: 700px; margin-bottom: 32px; }
+  .hero-meta { display: flex; gap: 32px; font-family: var(--font-mono); font-size: 13px; color: var(--ink-mute); flex-wrap: wrap; }
+  .hero-meta strong { color: var(--ink); font-weight: 500; }
+
+  section { margin-bottom: 80px; scroll-margin-top: 40px; }
+  .section-number {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--rust); margin-bottom: 12px; font-weight: 500;
+  }
+  h2.section-title {
+    font-family: var(--font-display); font-variation-settings: "opsz" 64, "SOFT" 30;
+    font-weight: 400; font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.15; letter-spacing: -0.015em; color: var(--ink); margin-bottom: 28px;
+  }
+  h3 {
+    font-family: var(--font-display); font-variation-settings: "opsz" 24, "SOFT" 30;
+    font-weight: 500; font-size: 22px; line-height: 1.3;
+    margin-top: 40px; margin-bottom: 16px; color: var(--ink);
+  }
+  h4 {
+    font-family: var(--font-display); font-weight: 500; font-size: 18px;
+    margin-top: 24px; margin-bottom: 12px; color: var(--ink);
+  }
+  p { margin-bottom: 18px; max-width: 740px; }
+  p.lead { font-size: 19px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 28px; }
+  p em { color: var(--rust); font-style: italic; }
+  p strong { font-weight: 600; color: var(--ink); }
+  .num { font-family: var(--font-mono); font-weight: 500; }
+
+  .formula {
+    background: var(--cream-soft); border-left: 3px solid var(--rust);
+    padding: 18px 24px; margin: 20px 0; border-radius: 0 4px 4px 0;
+  }
+  .formula-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--rust); margin-bottom: 6px; font-weight: 500;
+  }
+  .katex-display { margin: 6px 0; }
+
+  /* Verdict cards */
+  .verdict {
+    margin: 24px 0 32px; border-radius: 6px; padding: 28px 32px;
+    border-left-width: 4px; border-left-style: solid;
+  }
+  .verdict-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 8px; font-weight: 600;
+  }
+  .verdict-title {
+    font-family: var(--font-display); font-variation-settings: "opsz" 24;
+    font-weight: 500; font-size: 20px; line-height: 1.3; margin-bottom: 12px;
+  }
+  .verdict-body { font-size: 15px; line-height: 1.6; max-width: none; }
+  .verdict.weak {
+    background: #FBE7E1; border-color: var(--crimson);
+  }
+  .verdict.weak .verdict-label { color: var(--crimson); }
+  .verdict.weak .verdict-title { color: var(--crimson); }
+  .verdict.strong {
+    background: var(--green-tint); border-color: #5A6E2A;
+  }
+  .verdict.strong .verdict-label { color: #5A6E2A; }
+  .verdict.strong .verdict-title { color: #3A4A18; }
+  .verdict.partial {
+    background: var(--cream-deep); border-color: var(--gold);
+  }
+  .verdict.partial .verdict-label { color: var(--gold); }
+  .verdict.partial .verdict-title { color: var(--ink); }
+
+  /* Tables */
+  .table-wrap { margin: 28px 0; overflow-x: auto; border: 1px solid var(--border); border-radius: 4px; background: var(--cream-soft); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th {
+    background: var(--cream-deep); color: var(--ink); font-weight: 600; text-align: left;
+    padding: 12px 14px; border-bottom: 1.5px solid var(--border);
+    font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+  }
+  th.num-col { text-align: right; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border-soft); color: var(--ink-soft); }
+  td.num-col {
+    text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    font-size: 13px; color: var(--ink); font-weight: 500;
+  }
+  td.neg { color: var(--crimson); }
+  td.pos { color: #4A6020; }
+  td.code-col { font-family: var(--font-mono); font-size: 12px; color: var(--rust); }
+  tr:last-child td { border-bottom: none; }
+  tr.highlight td { background: var(--highlight); }
+  tr.subtotal td { background: var(--cream-deep); font-weight: 600; color: var(--ink); }
+  tr.total td {
+    background: #EFD89C; font-weight: 700; color: var(--ink);
+    border-top: 2px solid var(--rust);
+  }
+  .table-caption {
+    font-family: var(--font-display); font-variation-settings: "opsz" 14;
+    font-size: 14px; font-weight: 500; color: var(--ink-mute);
+    margin-bottom: 12px; font-style: italic;
+  }
+
+  /* Chart container */
+  .chart-card {
+    background: var(--cream-soft); border: 1px solid var(--border);
+    border-radius: 6px; padding: 24px; margin: 28px 0;
+  }
+  .chart-title {
+    font-family: var(--font-display); font-variation-settings: "opsz" 18;
+    font-weight: 500; font-size: 16px; margin-bottom: 8px; color: var(--ink);
+  }
+  .chart-sub {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--ink-mute); margin-bottom: 16px;
+  }
+  .chart-wrap { position: relative; height: 280px; }
+  .chart-wrap.tall { height: 320px; }
+  .chart-note {
+    font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic;
+  }
+
+  /* Quote */
+  .quote {
+    border-left: 3px solid var(--ink-mute);
+    padding: 8px 0 8px 24px;
+    margin: 24px 0;
+    font-family: var(--font-display); font-style: italic;
+    font-size: 18px; line-height: 1.5; color: var(--ink-soft);
+  }
+  .quote-author {
+    font-family: var(--font-mono); font-style: normal;
+    font-size: 12px; color: var(--ink-mute); margin-top: 8px; letter-spacing: 0.05em;
+  }
+
+  /* Stats grid */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
+  .stat-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .stat-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .stat-card {
+    background: var(--cream-soft); border: 1px solid var(--border);
+    padding: 18px; border-radius: 4px;
+  }
+  .stat-card.alert { background: #FBE7E1; border-color: var(--crimson); }
+  .stat-card.green { background: var(--green-tint); border-color: #B8C68E; }
+  .stat-card.gold { background: var(--cream-deep); border-color: var(--gold); }
+  .stat-label {
+    font-family: var(--font-mono); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .stat-value {
+    font-family: var(--font-display); font-variation-settings: "opsz" 32;
+    font-weight: 500; font-size: 24px; color: var(--ink); line-height: 1.1;
+  }
+  .stat-card.alert .stat-value { color: var(--crimson); }
+  .stat-card.green .stat-value { color: #3A4A18; }
+  .stat-detail { font-family: var(--font-mono); font-size: 10px; color: var(--ink-faint); margin-top: 4px; }
+
+  /* ===== INTERACTIVE WIDGETS ===== */
+  .widget {
+    background: linear-gradient(180deg, var(--cream-soft) 0%, var(--cream-deep) 100%);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 32px 36px; margin: 28px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .widget-label {
+    font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--rust); margin-bottom: 8px; font-weight: 600;
+  }
+  .widget-title {
+    font-family: var(--font-display); font-variation-settings: "opsz" 24;
+    font-weight: 500; font-size: 20px; color: var(--ink); margin-bottom: 20px;
+  }
+  .widget-hint {
+    font-size: 13px; color: var(--ink-mute); margin-bottom: 16px; font-style: italic;
+  }
+
+  .big-display {
+    text-align: center; padding: 24px 0;
+    background: var(--ink); border-radius: 6px; color: var(--cream);
+    margin: 16px 0;
+  }
+  .big-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+  }
+  .big-value {
+    font-family: var(--font-display); font-variation-settings: "opsz" 96;
+    font-weight: 500; font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; color: var(--cream); transition: color 0.3s;
+  }
+  .big-value.alert { color: #E89A8A; }
+  .big-value.warn { color: var(--gold); }
+  .big-value.good { color: #B5D27A; }
+  .big-sub {
+    font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint);
+    margin-top: 12px;
+  }
+
+  .slider-control { margin: 18px 0; }
+  .slider-label {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 10px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);
+  }
+  .slider-label .current {
+    font-family: var(--font-display); font-size: 20px; font-weight: 500;
+    color: var(--rust);
+  }
+  .slider {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 6px;
+    background: var(--border); border-radius: 3px; outline: none;
+    cursor: pointer;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--rust); cursor: grab;
+    border: 3px solid var(--cream);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .slider::-moz-range-thumb {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--rust); cursor: grab;
+    border: 3px solid var(--cream);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .slider:active::-webkit-slider-thumb { cursor: grabbing; }
+
+  .slider-markers {
+    position: relative; height: 24px; margin-top: 8px;
+  }
+  .marker {
+    position: absolute; transform: translateX(-50%);
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--ink-mute); white-space: nowrap;
+    padding-top: 8px;
+  }
+  .marker::before {
+    content: ''; position: absolute; left: 50%; top: 0;
+    width: 1px; height: 6px; background: var(--ink-mute);
+    transform: translateX(-50%);
+  }
+  .marker.observed { color: var(--teal); font-weight: 600; }
+  .marker.observed::before { background: var(--teal); width: 2px; }
+  .marker.lpem { color: var(--crimson); font-weight: 600; }
+  .marker.lpem::before { background: var(--crimson); width: 2px; }
+
+  .widget-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+  .widget-grid.narrow { grid-template-columns: 1fr 1.4fr; }
+  @media (max-width: 720px) { .widget-grid, .widget-grid.narrow { grid-template-columns: 1fr; } }
+
+  .insight-box {
+    background: var(--green-tint); border-left: 3px solid #5A6E2A;
+    padding: 16px 22px; border-radius: 0 4px 4px 0;
+    margin: 18px 0; font-size: 14px; line-height: 1.55; color: #2A3A0A;
+  }
+  .insight-box strong { color: #3A4A18; }
+
+  .pill {
+    display: inline-block; padding: 3px 10px; border-radius: 20px;
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .pill.bps { background: #5A6E2A; color: var(--cream); }
+  .pill.lpem { background: var(--crimson); color: var(--cream); }
+
+  /* Energy balance visualization */
+  .balance-viz {
+    display: flex; gap: 24px; align-items: flex-end;
+    margin: 24px 0; height: 280px;
+  }
+  .balance-col {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; gap: 8px;
+  }
+  .balance-bar-stack {
+    display: flex; flex-direction: column-reverse; width: 100%;
+    border-radius: 4px 4px 0 0; overflow: hidden;
+    transition: all 0.4s;
+  }
+  .balance-segment {
+    width: 100%; display: flex; align-items: center; justify-content: center;
+    color: var(--cream); font-family: var(--font-mono); font-size: 12px;
+    font-weight: 600; transition: all 0.4s;
+  }
+  .balance-segment.pln { background: var(--teal); }
+  .balance-segment.captive { background: var(--rust); }
+  .balance-year-label {
+    font-family: var(--font-display); font-weight: 500; font-size: 18px;
+    color: var(--ink);
+  }
+  .balance-total {
+    font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);
+  }
+
+  /* Anchor nav */
+  .anchor-nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247, 243, 234, 0.95); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0; margin-bottom: 32px;
+    display: flex; gap: 20px; align-items: center;
+    overflow-x: auto; white-space: nowrap;
+    font-family: var(--font-mono); font-size: 12px;
+  }
+  .anchor-nav a {
+    color: var(--ink-mute); text-decoration: none;
+    padding: 4px 10px; border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .anchor-nav a:hover { background: var(--cream-deep); color: var(--ink); }
+  .anchor-nav .anchor-brand {
+    font-family: var(--font-display); font-style: italic; font-weight: 500;
+    color: var(--rust); margin-right: auto;
+  }
+
+  /* Inline source links */
+  a.src-link, .chart-note a, .insight-box a, .stat-card a, footer a {
+    color: var(--rust); text-decoration: none;
+    border-bottom: 1px dotted var(--rust);
+    transition: all 0.15s;
+  }
+  a.src-link:hover, .chart-note a:hover, .insight-box a:hover, .stat-card a:hover, footer a:hover {
+    color: var(--crimson); border-bottom-color: var(--crimson);
+    background: var(--highlight);
+  }
+  sup.src {
+    font-family: var(--font-mono); font-size: 9px;
+    color: var(--rust); font-weight: 600;
+    margin-left: 1px;
+  }
+  sup.src a { color: var(--rust); text-decoration: none; }
+  sup.src a:hover { color: var(--crimson); }
+
+  /* Key result block */
+  .key-result {
+    background: var(--ink); color: var(--cream); padding: 36px;
+    border-radius: 4px; margin: 40px 0; text-align: center;
+  }
+  .key-result-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+  }
+
+  footer {
+    margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border);
+    font-family: var(--font-mono); font-size: 12px; color: var(--ink-mute);
+  }
+  footer h4 {
+    font-family: var(--font-display); font-size: 16px; font-weight: 500;
+    color: var(--ink); margin-bottom: 14px;
+  }
+  footer ul { list-style: none; }
+  footer li { padding: 4px 0; }
+  .brand { font-family: var(--font-display); font-style: italic; font-weight: 500; color: var(--rust); }
+
+  @media (max-width: 720px) {
+    .container { padding: 48px 20px 80px; }
+    .stat-grid, .stat-grid.cols-2, .stat-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+    .hero-meta { flex-direction: column; gap: 8px; }
+  }
+  .katex { font-size: 1.05em; }
+  .katex-display > .katex { font-size: 1.15em; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">#SemuaBisaDihitung — Edisi Kritik PDB</div>
+    <h1 class="hero-title">5,61% — Asalnya jelas. <em>Kritiknya bagaimana?</em></h1>
+    <p class="hero-subtitle">Dari mana datangnya pertumbuhan PDB Indonesia Q1-2026 sebesar 5,61%, dan apakah kritik LPEM yang menyebut angka itu "seharusnya" 4,6–4,9% berdiri di atas data yang kuat? Esai data dari publikasi resmi BPS, PLN, dan IESR — bukan tebakan.</p>
+    <div class="hero-meta">
+      <div><strong>Sumber data</strong> &nbsp;BPS, PLN, ESDM, IESR</div>
+      <div><strong>Bandingkan</strong> &nbsp;LPEM Special Report Mei 2026</div>
+    </div>
+  </div>
+
+  <!-- ========== BAGIAN 01: ASAL 5,61% ========== -->
+  <section id="asal">
+    <div class="section-number">Bagian 01 — Teori</div>
+    <h2 class="section-title">Dari mana datangnya 5,61%</h2>
+    <p class="lead">Tidak ada misteri. PDB Indonesia diukur dengan kerangka <em>System of National Accounts 2008</em>. Sisi produksi menjumlahkan Nilai Tambah Bruto (NTB) dari 17 lapangan usaha, ditambah pajak dikurangi subsidi atas produk. Pertumbuhan adalah selisih level periode ini dengan periode sebelumnya, dibagi dengan level Q1-2025.</p>
+
+    <div class="formula">
+      <div class="formula-label">Pertumbuhan PDB sebagai jumlah kontribusi sektoral</div>
+      $$g_{PDB} = \sum_{j=1}^{17} \frac{VA_{j,t} - VA_{j,t-1}}{PDB_{t-1}} + \frac{T_t - T_{t-1}}{PDB_{t-1}}$$
+    </div>
+
+    <p>Atau secara setara, $g_{PDB} = \sum_j s_j \cdot g_j + s_T \cdot g_T$, di mana $s$ adalah pangsa ADHK dan $g$ adalah pertumbuhan YoY. Itulah aritmetika lengkapnya — sisanya hanya soal mengisi tabel dengan data eksak BPS.</p>
+
+    <div class="table-caption">Tabel 1. Dekomposisi 5,61% dari 17 lapangan usaha (data eksak BPS, miliar Rp ADHK 2010)</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Sektor</th>
+            <th class="num-col">VA Q1-2025</th>
+            <th class="num-col">VA Q1-2026</th>
+            <th class="num-col">Growth</th>
+            <th class="num-col">Kontribusi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="code-col">A</td><td>Pertanian, Kehutanan, Perikanan</td><td class="num-col">361.524,6</td><td class="num-col">379.493,4</td><td class="num-col pos">+4,97%</td><td class="num-col">+0,55 pp</td></tr>
+          <tr><td class="code-col">B</td><td>Pertambangan & Penggalian</td><td class="num-col">231.340,1</td><td class="num-col">226.392,3</td><td class="num-col neg">−2,14%</td><td class="num-col neg">−0,15 pp</td></tr>
+          <tr class="highlight"><td class="code-col">C</td><td><strong>Industri Pengolahan</strong></td><td class="num-col">667.654,7</td><td class="num-col">701.282,4</td><td class="num-col pos">+5,04%</td><td class="num-col"><strong>+1,03 pp</strong></td></tr>
+          <tr class="highlight"><td class="code-col">D</td><td><strong>Pengadaan Listrik & Gas</strong></td><td class="num-col">34.302,9</td><td class="num-col">33.962,5</td><td class="num-col neg">−0,99%</td><td class="num-col neg">−0,01 pp</td></tr>
+          <tr><td class="code-col">E</td><td>Pengadaan Air, Limbah</td><td class="num-col">2.722,3</td><td class="num-col">2.733,8</td><td class="num-col">+0,42%</td><td class="num-col">+0,00 pp</td></tr>
+          <tr><td class="code-col">F</td><td>Konstruksi</td><td class="num-col">313.849,1</td><td class="num-col">331.081,7</td><td class="num-col pos">+5,49%</td><td class="num-col">+0,53 pp</td></tr>
+          <tr><td class="code-col">G</td><td>Perdagangan</td><td class="num-col">428.042,7</td><td class="num-col">454.858,9</td><td class="num-col pos">+6,26%</td><td class="num-col">+0,82 pp</td></tr>
+          <tr><td class="code-col">H</td><td>Transportasi & Pergudangan</td><td class="num-col">154.724,4</td><td class="num-col">167.170,5</td><td class="num-col pos">+8,04%</td><td class="num-col">+0,38 pp</td></tr>
+          <tr><td class="code-col">I</td><td>Akomodasi & Makan Minum</td><td class="num-col">105.506,3</td><td class="num-col">119.374,7</td><td class="num-col pos">+13,14%</td><td class="num-col">+0,42 pp</td></tr>
+          <tr><td class="code-col">J</td><td>Informasi & Komunikasi</td><td class="num-col">227.340,4</td><td class="num-col">243.566,0</td><td class="num-col pos">+7,14%</td><td class="num-col">+0,50 pp</td></tr>
+          <tr><td class="code-col">K</td><td>Jasa Keuangan & Asuransi</td><td class="num-col">134.393,2</td><td class="num-col">140.676,6</td><td class="num-col pos">+4,68%</td><td class="num-col">+0,19 pp</td></tr>
+          <tr><td class="code-col">L</td><td>Real Estat</td><td class="num-col">89.699,8</td><td class="num-col">92.875,2</td><td class="num-col pos">+3,54%</td><td class="num-col">+0,10 pp</td></tr>
+          <tr><td class="code-col">M,N</td><td>Jasa Perusahaan</td><td class="num-col">66.374,8</td><td class="num-col">69.635,9</td><td class="num-col pos">+4,91%</td><td class="num-col">+0,10 pp</td></tr>
+          <tr><td class="code-col">O</td><td>Adm Pemerintahan</td><td class="num-col">111.083,6</td><td class="num-col">118.248,8</td><td class="num-col pos">+6,45%</td><td class="num-col">+0,22 pp</td></tr>
+          <tr><td class="code-col">P</td><td>Jasa Pendidikan</td><td class="num-col">92.836,6</td><td class="num-col">97.648,5</td><td class="num-col pos">+5,18%</td><td class="num-col">+0,15 pp</td></tr>
+          <tr><td class="code-col">Q</td><td>Jasa Kesehatan</td><td class="num-col">45.266,0</td><td class="num-col">48.715,8</td><td class="num-col pos">+7,62%</td><td class="num-col">+0,11 pp</td></tr>
+          <tr><td class="code-col">RSTU</td><td>Jasa Lainnya</td><td class="num-col">70.070,5</td><td class="num-col">77.014,6</td><td class="num-col pos">+9,91%</td><td class="num-col">+0,21 pp</td></tr>
+          <tr class="subtotal"><td colspan="2">NTB Total</td><td class="num-col">3.136.732,0</td><td class="num-col">3.304.731,6</td><td class="num-col">+5,36%</td><td class="num-col">+5,15 pp</td></tr>
+          <tr><td class="code-col">T</td><td>Pajak−Subsidi atas Produk</td><td class="num-col">127.857,8</td><td class="num-col">142.951,2</td><td class="num-col pos">+11,80%</td><td class="num-col">+0,46 pp</td></tr>
+          <tr class="total"><td colspan="2">PDB Total</td><td class="num-col">3.264.589,8</td><td class="num-col">3.447.682,8</td><td class="num-col">+5,61%</td><td class="num-col">+5,61 pp</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Selesai. Angka 5,61% lahir secara aritmetik dari tabel di atas — tidak ada langkah misterius. Pertanyaan menarik bukan apakah aritmetika ini benar (jelas benar), tapi apakah angka growth per sektor di kolom keempat <em>masuk akal secara ekonomi</em>. Di situ LPEM masuk.</p>
+  </section>
+
+  <!-- ========== BAGIAN 02: KLAIM LPEM ========== -->
+  <section id="klaim-lpem">
+    <div class="section-number">Bagian 02 — Klaim</div>
+    <h2 class="section-title">Argumen utama LPEM</h2>
+    <p class="lead">LPEM FEB UI dalam <em>Special Report</em> Mei 2026 menyatakan ada <em>internal inconsistencies</em> dalam rilis BPS, dan menyimpulkan pertumbuhan "seharusnya" 4,6–4,9%. Argumen sentralnya berkisar pada satu hal: ketidakcocokan sektor listrik dengan sektor manufaktur.</p>
+
+    <div class="quote">
+      Sektor listrik, gas, dan air mengalami kontraksi sekitar minus 0,99 persen, sementara sektor manufaktur justru tumbuh di atas 5 persen. Dua hal ini tidak mungkin terjadi bersamaan. Manufaktur membutuhkan listrik. Kalau listrik turun, mestinya manufaktur ikut melemah.
+      <div class="quote-author">— Argumen sentral LPEM, dirangkum dari Special Report Mei 2026</div>
+    </div>
+
+    <p>Dari premis ini, LPEM membangun skenario alternatif dengan asumsi manufaktur hanya tumbuh ~1,5%. Hasilnya: PDB terkoreksi sebesar 4,89% — bukan 5,61%.</p>
+
+    <p>Argumen ini terdengar logis pada permukaan. Tapi empat tes berikut menunjukkan bahwa data tidak mendukungnya.</p>
+
+    <h3>🎯 Dashboard Interaktif #1 — PDB Simulator</h3>
+    <p>Sebelum masuk ke tes, mainkan slider di bawah. Ubah asumsi growth Manufaktur, lihat dampaknya ke PDB total. Pertanyaan: berapa rendah manufaktur harus tumbuh untuk dapat angka koreksi LPEM (4,89%)?</p>
+
+    <div class="widget">
+      <div class="widget-label">Live Calculator</div>
+      <div class="widget-title">Sensitivitas PDB Q1-2026 terhadap pertumbuhan Manufaktur</div>
+      <p class="widget-hint">Asumsi: 16 sektor lain dan pajak-subsidi tetap di nilai observasi Q1-2026; hanya Manufaktur (pangsa 20,45% ADHK) yang diubah.</p>
+
+      <div class="big-display">
+        <div class="big-label">Pertumbuhan PDB Q1-2026</div>
+        <div class="big-value" id="pdbResult">+5,61%</div>
+        <div class="big-sub" id="pdbInterpretation">Sesuai rilis resmi BPS</div>
+      </div>
+
+      <div class="slider-control">
+        <div class="slider-label">
+          <span>Pertumbuhan Manufaktur Q1 (YoY)</span>
+          <span class="current" id="manufValue">+5,04%</span>
+        </div>
+        <input type="range" class="slider" id="manufSlider" min="-10" max="12" step="0.1" value="5.04">
+        <div class="slider-markers">
+          <span class="marker" style="left: 22.7%;">−5%</span>
+          <span class="marker lpem" style="left: 52.3%;">LPEM 1,5%</span>
+          <span class="marker observed" style="left: 68.4%;">BPS 5,04%</span>
+          <span class="marker" style="left: 90.9%;">+10%</span>
+        </div>
+      </div>
+
+      <div class="stat-grid cols-3" style="margin-top: 20px;">
+        <div class="stat-card alert">
+          <div class="stat-label">Skenario LPEM</div>
+          <div class="stat-value">manuf +1,5%</div>
+          <div class="stat-detail">→ PDB +4,89%</div>
+        </div>
+        <div class="stat-card green">
+          <div class="stat-label">Observasi BPS</div>
+          <div class="stat-value">manuf +5,04%</div>
+          <div class="stat-detail">→ PDB +5,61%</div>
+        </div>
+        <div class="stat-card gold">
+          <div class="stat-label">Pangsa Manufaktur</div>
+          <div class="stat-value">20,45%</div>
+          <div class="stat-detail">dari PDB ADHK 2010</div>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <strong>Insight:</strong> Setiap 1 percentage point perubahan growth Manufaktur menggeser PDB sekitar 0,21 pp. Untuk dapat angka koreksi LPEM 4,89%, Manufaktur harus tumbuh hanya 1,5% — jauh di bawah semua indikator independen (IKBM 51,37, PMI 52,03, impor bahan baku primer +31,77%, PMTB mesin +10,78%). Tiga tes berikut menunjukkan kenapa skenario LPEM ini tidak konsisten dengan data lapangan.
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BAGIAN 03: TES 1 — LISTRIK VS GAS ========== -->
+  <section id="tes-1">
+    <div class="section-number">Bagian 03 — Tes empiris 1</div>
+    <h2 class="section-title">Tes 1 — Apakah "listrik turun -0,99%" akurat?</h2>
+    <p class="lead">Sektor "Pengadaan Listrik & Gas" (kategori D) bukan sektor tunggal. Ia terdiri dari dua sub-sektor yang berperilaku sangat berbeda di Q1-2026.</p>
+
+    <div class="table-caption">Tabel 2. Dekomposisi Sektor D Pengadaan Listrik & Gas Q1-2026</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sub-sektor</th>
+            <th class="num-col">VA Q1-2025 (M Rp)</th>
+            <th class="num-col">VA Q1-2026 (M Rp)</th>
+            <th class="num-col">Pangsa dalam D</th>
+            <th class="num-col">Growth</th>
+            <th class="num-col">Kontribusi ke D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Ketenagalistrikan</strong></td><td class="num-col">31.199,7</td><td class="num-col">31.122,9</td><td class="num-col">90,96%</td><td class="num-col neg">−0,25%</td><td class="num-col neg">−0,23 pp</td></tr>
+          <tr><td>Pengadaan Gas & Produksi Es</td><td class="num-col">3.103,2</td><td class="num-col">2.839,6</td><td class="num-col">9,04%</td><td class="num-col neg">−8,49%</td><td class="num-col neg">−0,77 pp</td></tr>
+          <tr class="total"><td>Total Sektor D</td><td class="num-col">34.302,9</td><td class="num-col">33.962,5</td><td class="num-col">100,00%</td><td class="num-col neg">−0,99%</td><td class="num-col neg">−0,99 pp</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Sub-sektor Ketenagalistrikan hanya turun <span class="num">−0,25%</span> — esensinya flat. Sub-sektor Pengadaan Gas turun jauh, <span class="num">−8,49%</span>, dan menjelaskan <strong>77% dari total kontraksi sektor D</strong>. LPEM membangun argumen "listrik turun" dari angka campuran listrik+gas — secara metodologis tidak tepat.</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Q1 Y-on-Y Growth: Listrik vs Gas vs Sektor D Total (2014–2026)</div>
+      <div class="chart-sub">Volatilitas datang dari gas, bukan listrik</div>
+      <div class="chart-wrap"><canvas id="chartListrikGas"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026 (5 Mei 2026)</a> dan seri PDB Lapangan Usaha ADHK 2010 historis. Pengadaan Gas memang sangat volatile (-13,34% di Q1-2024, -8,49% di Q1-2026). Ketenagalistrikan relatively stabil; -0,25% di Q1-2026 adalah perlambatan dari +5,60% di Q1-2025.</div>
+    </div>
+
+    <h3>🎯 Dashboard Interaktif #2 — Sektor D Decomposer</h3>
+    <p>Geser dua slider di bawah. Buktikan bahwa -0,99% sektor D didominasi gas, bukan listrik. Coba: set Ketenagalistrikan = 0% (asumsi listrik tidak turun sama sekali) — apa yang terjadi dengan total sektor D?</p>
+
+    <div class="widget">
+      <div class="widget-label">Live Decomposer</div>
+      <div class="widget-title">Pengadaan Listrik &amp; Gas Q1-2026 (Sektor D)</div>
+      <p class="widget-hint">Formula: $g_D = 0{,}9096 \cdot g_{\text{listrik}} + 0{,}0904 \cdot g_{\text{gas}}$ — bobot dari pangsa VA Q1-2025.</p>
+
+      <div class="widget-grid">
+        <div>
+          <div class="slider-control">
+            <div class="slider-label">
+              <span>Ketenagalistrikan (90,96% bobot)</span>
+              <span class="current" id="listrikValue">−0,25%</span>
+            </div>
+            <input type="range" class="slider" id="listrikSlider" min="-5" max="10" step="0.05" value="-0.25">
+            <div class="slider-markers">
+              <span class="marker observed" style="left: 31.7%;">obs</span>
+              <span class="marker" style="left: 33.3%;">0%</span>
+            </div>
+          </div>
+
+          <div class="slider-control">
+            <div class="slider-label">
+              <span>Pengadaan Gas (9,04% bobot)</span>
+              <span class="current" id="gasValue">−8,49%</span>
+            </div>
+            <input type="range" class="slider" id="gasSlider" min="-15" max="15" step="0.05" value="-8.49">
+            <div class="slider-markers">
+              <span class="marker observed" style="left: 21.7%;">obs</span>
+              <span class="marker" style="left: 50%;">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="big-display">
+            <div class="big-label">Sektor D Total Growth</div>
+            <div class="big-value" id="dResult">−0,99%</div>
+            <div class="big-sub" id="dContrib">Listrik: −0,23 pp · Gas: −0,77 pp</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <strong>Insight:</strong> Coba set Listrik = 0% (asumsi tidak turun) dan biarkan Gas di -8,49%. Hasil: Sektor D masih turun ~-0,77%. <strong>Gas mendominasi total kontraksi.</strong> Sebaliknya, kalau Listrik di -0,25% tapi Gas = 0%, Sektor D hanya turun -0,23% — kecil dan tidak akan jadi headline. Argumen LPEM yang menyebut "listrik turun -0,99%" sebenarnya angka campuran yang didominasi gas.
+      </div>
+    </div>
+
+    <div class="verdict weak">
+      <div class="verdict-label">Verdict Tes 1</div>
+      <div class="verdict-title">Klaim "listrik turun -0,99%" technically misleading</div>
+      <div class="verdict-body">Yang turun signifikan adalah <em>gas</em>, bukan <em>listrik</em>. Sub-sektor Ketenagalistrikan hanya turun -0,25% — perlambatan, bukan kontraksi tajam. LPEM membangun argumen tentang hubungan manufaktur-listrik dari angka campuran listrik+gas.</div>
+    </div>
+  </section>
+
+  <!-- ========== BAGIAN 04: TES 2 — INDIKATOR INDEPENDEN ========== -->
+  <section id="tes-2">
+    <div class="section-number">Bagian 04 — Tes empiris 2</div>
+    <h2 class="section-title">Tes 2 — Apakah ada bukti independen manufaktur tumbuh?</h2>
+    <p class="lead">Kalau pertumbuhan manufaktur +5,04% bermasalah, harus ada indikator independen yang menunjukkan kebalikannya. Sebaliknya, kalau banyak indikator kompak menunjukkan ekspansi, klaim LPEM sulit dipertahankan.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card green">
+        <div class="stat-label">IKBM Q1-2026</div>
+        <div class="stat-value">51,37</div>
+        <div class="stat-detail">Zona ekspansi (>50)</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">PMI BI Q1-2026</div>
+        <div class="stat-value">52,03</div>
+        <div class="stat-detail">Zona ekspansi</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">Impor Bahan Baku Primer</div>
+        <div class="stat-value">+31,77%</div>
+        <div class="stat-detail">Y-on-Y</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">Impor Bahan Baku Olahan</div>
+        <div class="stat-value">+7,28%</div>
+        <div class="stat-detail">Y-on-Y</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">Impor Barang Modal</div>
+        <div class="stat-value">+14,27%</div>
+        <div class="stat-detail">Y-on-Y</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">PMTB Mesin & Perlengkapan</div>
+        <div class="stat-value">+10,78%</div>
+        <div class="stat-detail">Y-on-Y</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">Industri Mesin (subsektor)</div>
+        <div class="stat-value">+21,93%</div>
+        <div class="stat-detail">Tertinggi di manufaktur</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">Industri Komputer/Elektronik</div>
+        <div class="stat-value">+10,35%</div>
+        <div class="stat-detail">Driven by export</div>
+      </div>
+    </div>
+
+    <p style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-mute); margin-top: 16px;">
+      Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a> untuk IKBM, impor bahan baku/barang modal, PMTB Mesin, dan subsektor Industri Pengolahan. <a href="https://www.bi.go.id/id/publikasi/laporan/Pages/PMI-BI-Triwulan-I-2026.aspx" target="_blank">Bank Indonesia</a> untuk PMI BI.
+    </p>
+
+    <p>Semua indikator ini bersifat <em>independen dari satu sama lain</em> dan diukur dengan metodologi berbeda: IKBM lewat survei perusahaan (24.182 sampel), PMI lewat survei BI, impor lewat data bea cukai, PMTB lewat survei investasi. Kalau benar manufaktur "tidak tumbuh", indikator-indikator ini tidak akan kompak menunjukkan ekspansi.</p>
+
+    <p>Logika sederhana: importir mengimpor bahan baku +31,77% karena ada permintaan untuk diolah. Investor menambah mesin +10,78% karena ada proyeksi produksi. Konsistensi multi-indikator inilah yang sulit dijelaskan oleh narrative "manufaktur tidak tumbuh".</p>
+
+    <div class="verdict strong">
+      <div class="verdict-label">Verdict Tes 2</div>
+      <div class="verdict-title">Banyak indikator independen mendukung manufaktur memang tumbuh</div>
+      <div class="verdict-body">IKBM, PMI BI, impor bahan baku primer (+31,77%), impor barang modal, dan PMTB mesin kompak menunjukkan ekspansi aktivitas industri. Skenario LPEM yang menempatkan manufaktur di +1,5% atau −6% sulit dijelaskan tanpa mengabaikan sumber data lain ini.</div>
+    </div>
+  </section>
+
+  <!-- ========== BAGIAN 05: TES 3 — DISKON LISTRIK 2025 ========== -->
+  <section id="tes-3">
+    <div class="section-number">Bagian 05 — Tes empiris 3</div>
+    <h2 class="section-title">Tes 3 — Q1-2025 ter-<em>boost</em> diskon listrik, Q1-2026 normalisasi</h2>
+    <p class="lead">Penurunan tipis −0,25% Ketenagalistrikan di Q1-2026 bukan misteri. Q1-2024 dan Q1-2025 anomalously tinggi (recovery + diskon listrik), sehingga Q1-2026 yang normal tampil sebagai kontraksi tipis dalam perbandingan YoY. Tes ini menunjukkan polanya dengan data Q1 BPS sendiri.</p>
+
+    <h3>Anatomi kebijakan diskon listrik 2025</h3>
+    <p>Berdasarkan <strong><a href="https://jdih.esdm.go.id/dokumen/peraturan/KepmenESDM%20Nomor%20348.K-TL.01-MEM.L-2024%20Tahun%202024" target="_blank">Keputusan Menteri ESDM No. 348.K/TL.01/MEM.L/2024</a></strong>, pemerintah memberikan diskon 50% biaya listrik kepada 81,42 juta pelanggan rumah tangga PT PLN selama Januari–Februari 2025 — paket stimulus merespons kenaikan PPN 12%.</p>
+
+    <div class="stat-grid cols-4">
+      <div class="stat-card gold">
+        <div class="stat-label">Penerima diskon</div>
+        <div class="stat-value">81,42 jt</div>
+        <div class="stat-detail">RT 450–2.200 VA</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-label">Cakupan</div>
+        <div class="stat-value">97%</div>
+        <div class="stat-detail">dari pelanggan PLN</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-label">Durasi</div>
+        <div class="stat-value">2 bulan</div>
+        <div class="stat-detail">Jan–Feb 2025</div>
+      </div>
+      <div class="stat-card alert">
+        <div class="stat-label">Untuk industri?</div>
+        <div class="stat-value">Tidak</div>
+        <div class="stat-detail">Hanya rumah tangga</div>
+      </div>
+    </div>
+
+    <h3>Mekanisme front-loading pelanggan prabayar</h3>
+    <p>Mayoritas pelanggan 450 VA dan 900 VA adalah <strong>prabayar</strong>. Dengan harga setengah, mereka bisa beli kWh dua kali lebih banyak untuk uang yang sama. Perilaku rasional: <em>stockpile token</em> selama diskon Jan-Feb 2025, gunakan di bulan-bulan berikutnya. Akibatnya konsumsi tercatat Q1-2025 di-<em>boost</em> oleh akumulasi inventori token. Q1-2026 dengan tarif normal kembali ter-perbandingan dengan Q1-2025 yang elevated → tampil sebagai kontraksi.</p>
+
+    <h3>Bukti dari time series Q1 Ketenagalistrikan VA (BPS, 2018–2026)</h3>
+    <p>Kalau hipotesis high base benar, kita seharusnya melihat: Q1-2024 dan Q1-2025 di atas rata-rata historis, Q1-2026 mean-reversion ke wilayah negatif. Data BPS time series mengkonfirmasi ini:</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Pertumbuhan Q1 Ketenagalistrikan VA Y-on-Y, 2018–2026 (BPS)</div>
+      <div class="chart-sub">Rata-rata 2018–2023 ≈ +3,9%. Q1-2024 dan Q1-2025 anomalously tinggi. Q1-2026 normalisasi.</div>
+      <div class="chart-wrap"><canvas id="chartKetenagalistrikanQ1"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a> dan seri PDB Lapangan Usaha ADHK 2010 historis. Rata-rata historis Q1 2018–2023: +3,87%. Q1-2024 (+7,78%) dan Q1-2025 (+5,60%) keduanya di atas rata-rata — Q1-2024 dari recovery pasca-COVID + electrification, Q1-2025 dari diskon listrik. Q1-2026 (−0,25%) adalah mean-reversion terhadap base yang elevated dua tahun berturut-turut.</div>
+    </div>
+
+    <h3>Hitungan: berapa pp dari −0,25% dijelaskan high base?</h3>
+    <p>Q1-2025 Ketenagalistrikan VA tumbuh +5,60% — surplus ~1,7 pp di atas rata-rata historis +3,87%. Q1-2024 surplus ~3,9 pp di atas rata-rata. Akumulasi dua tahun surplus → basis Q1-2025 di level elevated. Konservatif: kalau separuh swing dari Q1-2025 (+5,60%) ke Q1-2026 (−0,25%) attributable ke high base normalization, maka <em>underlying</em> growth Q1-2026 berkisar +2,5% sampai +3% — perlambatan, bukan kontraksi.</p>
+
+    <div class="verdict strong">
+      <div class="verdict-label">Verdict Tes 3</div>
+      <div class="verdict-title">Diskon listrik 2025 + recovery 2024 = high base double-stacked untuk Q1-2026</div>
+      <div class="verdict-body">Q1-2025 Ketenagalistrikan VA elevated +5,60% (vs rata-rata historis +3,87%) karena diskon Jan-Feb mendorong front-loading konsumsi RT. Q1-2024 sudah elevated +7,78% (recovery surge). Q1-2026 (−0,25%) adalah mean-reversion terhadap dua tahun base yang elevated — bukan tanda manufaktur turun. <em>Underlying</em> growth tetap di kisaran +2,5–3%.</div>
+    </div>
+  </section>
+
+  <!-- ========== BAGIAN 06: TES 4 — INDUSTRI TUMBUH, LISTRIK TURUN ========== -->
+  <section id="tes-4">
+    <div class="section-number">Bagian 06 — Tes empiris 4</div>
+    <h2 class="section-title">Tes 4 — Industri tumbuh, listrik PLN turun. <em>Kenapa?</em></h2>
+    <p class="lead">Pertanyaan sederhana, jawaban sederhana: <strong>karena industri makin pakai listrik produksi sendiri (captive power), bukan beli ke PLN.</strong> Lima bukti berikut menunjukkan ini bukan hipotesis baru — sudah pola struktural sejak lama, dan akselerasi dramatis dalam 5 tahun terakhir.</p>
+
+    <h3>Bukti 1 — Konsumen utama listrik PLN bukan industri pengolahan (IO BPS 2016)</h3>
+    <p>Asumsi LPEM "kalau listrik turun, manufaktur ikut turun" mengandaikan industri pengolahan adalah konsumen utama listrik PLN. Faktanya tidak. Tabel Input-Output BPS 2016 (52 industri) menunjukkan distribusi output Ketenagalistrikan (I-28):</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Ke mana output Ketenagalistrikan PLN pergi? (IO BPS 2016)</div>
+      <div class="chart-sub">Total output I-28: Rp 565 trilyun · Rumah Tangga 14,75% &gt; Industri Pengolahan 9,81%</div>
+      <div class="chart-wrap"><canvas id="chartIOListrik"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS Tabel Input-Output Indonesia Transaksi Domestik Atas Dasar Harga Produsen (52 Industri), 2016</a>. Self-consumption 48% adalah transmisi/distribusi losses dan operasi pembangkit. Di luar itu, RT adalah konsumen terbesar — bukan industri.</div>
+    </div>
+
+    <div class="stat-grid cols-3" style="margin-top: 16px;">
+      <div class="stat-card alert">
+        <div class="stat-label">Konsumsi RT</div>
+        <div class="stat-value">14,75%</div>
+        <div class="stat-detail">Rp 83,4 trilyun</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Industri Pengolahan</div>
+        <div class="stat-value">9,81%</div>
+        <div class="stat-detail">Rp 55,4 trilyun</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">RT &gt; Manufaktur</div>
+        <div class="stat-value">+4,94 pp</div>
+        <div class="stat-detail">Selisih dukungan</div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <strong>Implikasi:</strong> kalau diskon listrik 2025 mendorong RT konsumsi melonjak +5% di Q1-2025 (high base), lalu Q1-2026 normalisasi turun ~3-5%, dampak ke output Ketenagalistrikan langsung: <strong>−0,4 sampai −0,7 pp</strong>. Cukup untuk menjelaskan observed −0,25% — tanpa industri perlu turun. <em>RT cukup berpengaruh dibanding industri.</em>
+    </div>
+
+    <h3>Bukti 2 — Industri padat listrik beli bahan bakar 2-11× lebih banyak dari listrik PLN (IO BPS 2016)</h3>
+    <p>Industri yang seharusnya paling padat listrik — semen, smelter, kimia, kertas — justru membeli batubara, migas, dan BBM dalam jumlah jauh lebih besar dari listrik PLN. Bahan bakar ini sebagian untuk proses (kiln semen, blast furnace baja), tapi mayoritas untuk pembangkit listrik captive sendiri.</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Rasio Pembelian Bahan Bakar / Listrik PLN per Industri Padat Energi (IO 2016)</div>
+      <div class="chart-sub">Rasio &gt; 1 = sinyal captive power. Semua industri padat listrik melebihi 2×.</div>
+      <div class="chart-wrap"><canvas id="chartBahanBakar"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS Tabel IO 2016</a>. Bahan bakar = batubara + migas mentah + BBM olahan + gas. Industri Logam Dasar (smelter aluminium/baja/nikel) beli listrik PLN hanya 2,35% dari output — padahal smelter internasional listriknya 30-40% dari biaya operasi. Selisih = captive sendiri.</div>
+    </div>
+
+    <p>Dan dari semua batubara yang dijual untuk konsumsi domestik intermediate di 2016: <strong>56,6% ke PLN, 43,4% ke industri sendiri</strong> (terutama I-21 Semen 16,6%, I-19 Kimia 5,2%, I-22 Logam Dasar 3,0%, I-18 Kertas 3,0%) — <a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS Tabel IO 2016</a>. Sudah di 2016 — sebelum captive boom — hampir setengah batubara industri ke captive sendiri.</p>
+
+    <h3>Bukti 3 — Kapasitas captive tumbuh 2× lipat dalam 5 tahun (IESR 2026)</h3>
+    <p>Tren yang sudah ada sejak 2016 berakselerasi dramatis dalam lima tahun terakhir, didorong hilirisasi nikel dan baja. Data CREA-GEM dan IESR mencatat trajectory tahunan kapasitas PLTU captive batubara:</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Kapasitas Pembangkit Captive Indonesia, 2019 → 2025 (PLTU Batubara) + Total 2024</div>
+      <div class="chart-sub">PLTU captive batubara: 5,5 GW (2019) → 19,3 GW (2025). Total semua jenis: 14 GW → 33 GW.</div>
+      <div class="chart-wrap tall"><canvas id="chartCaptive"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://iesr.or.id/lembar-fakta-pembangkit-listrik-captive/" target="_blank">IESR Lembar Fakta Captive (Feb 2026)</a> untuk total captive 2019 (14 GW) dan 2024 (33 GW). <a href="https://energyandcleanair.org/wp/wp-content/uploads/2024/11/ID-Press-release_Indonesia-Captive-Briefing-2024-update.pdf" target="_blank">CREA-GEM "Tracing Indonesia's captive power growth"</a> (November 2024) untuk PLTU batubara captive Juli 2019 (5,7 GW), Juli 2023 (10,7 GW), Juli 2024 (15,2 GW), proyeksi akhir 2024 (17,1 GW). <a href="https://www.kabarbursa.com/ekonomi-hijau/crea-ungkap-adanya-lonjakan-pltu-captive-di-balik-hilirisasi" target="_blank">Update CREA-GEM Januari 2026</a>: PLTU captive 2025 = 19,3 GW. Per ESDM 2025, total kapasitas nasional 107 GW — captive + non-PLN 24,5%.</div>
+    </div>
+
+    <div class="stat-grid cols-4">
+      <div class="stat-card alert">
+        <div class="stat-label">Captive total 2024</div>
+        <div class="stat-value">33 GW</div>
+        <div class="stat-detail">2,4× vs 2019 (<a href="https://iesr.or.id/lembar-fakta-pembangkit-listrik-captive/" target="_blank">IESR</a>)</div>
+      </div>
+      <div class="stat-card alert">
+        <div class="stat-label">PLTU captive 2025</div>
+        <div class="stat-value">19,3 GW</div>
+        <div class="stat-detail">3,4× vs 2019 (<a href="https://www.kabarbursa.com/ekonomi-hijau/crea-ungkap-adanya-lonjakan-pltu-captive-di-balik-hilirisasi" target="_blank">CREA-GEM</a>)</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-label">Proyeksi 2026</div>
+        <div class="stat-value">26,2 GW</div>
+        <div class="stat-detail">PLTU captive (pipeline +11 GW)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Morowali (nikel)</div>
+        <div class="stat-value">~6 GW</div>
+        <div class="stat-detail">≈ 1/3 sistem Sulawesi</div>
+      </div>
+    </div>
+
+    <h3>Bukti 4 — Math: 85% pertumbuhan kebutuhan listrik industri 2019–2024 dipenuhi captive</h3>
+    <p>Pakai formula sederhana dan data lapangan untuk kuantifikasi: berapa persen <em>tepatnya</em> dari pertumbuhan kebutuhan listrik industri yang dipenuhi captive vs PLN?</p>
+
+    <div class="formula">
+      <div class="formula-label">Persamaan keseimbangan listrik industri</div>
+      $$E_{industri}(t) = E_{PLN}(t) + E_{captive}(t), \quad E_{captive}(t) \approx C_{captive}(t) \times CF \times 8760$$
+    </div>
+
+    <div class="table-caption">Tabel 3. Neraca energi listrik industri Indonesia, 2019 vs 2024 (CF asumsi 50%)</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Komponen</th>
+            <th class="num-col">2019</th>
+            <th class="num-col">2024</th>
+            <th class="num-col">Δ (penambahan)</th>
+            <th class="num-col">Sumber</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PLN industri (TWh)</td>
+            <td class="num-col">~77</td>
+            <td class="num-col">91,07</td>
+            <td class="num-col pos">+14,07</td>
+            <td><a href="https://web.pln.co.id/media/siaran-pers/2026/02/konsumsi-listrik-nasional-tumbuh-pln-catat-penjualan-31769-twh-di-2025" target="_blank">PLN siaran pers</a></td>
+          </tr>
+          <tr>
+            <td>Captive kapasitas (GW)</td>
+            <td class="num-col">14,0</td>
+            <td class="num-col">33,0</td>
+            <td class="num-col pos">+19 GW</td>
+            <td><a href="https://iesr.or.id/lembar-fakta-pembangkit-listrik-captive/" target="_blank">IESR 2026</a></td>
+          </tr>
+          <tr>
+            <td>Captive generasi (TWh, CF 50%)</td>
+            <td class="num-col">61,3</td>
+            <td class="num-col">144,5</td>
+            <td class="num-col pos">+83,22</td>
+            <td>$C \times CF \times 8760$</td>
+          </tr>
+          <tr class="highlight">
+            <td><strong>Total kebutuhan industri</strong></td>
+            <td class="num-col"><strong>138,3</strong></td>
+            <td class="num-col"><strong>235,6</strong></td>
+            <td class="num-col pos"><strong>+97,29</strong></td>
+            <td>Penjumlahan</td>
+          </tr>
+          <tr class="total">
+            <td>Share captive dalam Δ total</td>
+            <td colspan="4" class="num-col" style="text-align: center;">83,22 / 97,29 = <strong>85,5%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="key-result">
+      <div class="key-result-label">Temuan empirik utama</div>
+      <p style="font-family: var(--font-display); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--cream); max-width: none;">
+        Dari 97,3 TWh penambahan kebutuhan listrik industri 2019–2024:<br/>
+        <strong style="color: #B5D27A;">85,5% datang dari captive power</strong>.<br/>
+        Hanya 14,5% datang dari pembelian PLN.
+      </p>
+    </div>
+
+    <h4>🎯 Dashboard Interaktif — Captive Calculator</h4>
+    <p>Skeptis dengan asumsi CF 50%? Mainkan slider di bawah — di rentang 20-80%, share captive tetap 70-90%. Kesimpulan robust.</p>
+
+    <div class="widget">
+      <div class="widget-label">Live Energy Balance Calculator</div>
+      <div class="widget-title">Robustness Test: Share captive di berbagai asumsi CF</div>
+
+      <div class="widget-grid narrow">
+        <div>
+          <div class="slider-control">
+            <div class="slider-label">
+              <span>Capacity Factor (CF) captive</span>
+              <span class="current" id="cfValue">50%</span>
+            </div>
+            <input type="range" class="slider" id="cfSlider" min="20" max="80" step="1" value="50">
+            <div class="slider-markers">
+              <span class="marker" style="left: 0%;">20%</span>
+              <span class="marker lpem" style="left: 33.3%;">konservatif</span>
+              <span class="marker observed" style="left: 50%;">basis</span>
+              <span class="marker" style="left: 100%;">80%</span>
+            </div>
+          </div>
+
+          <div class="stat-grid cols-2" style="margin-top: 18px;">
+            <div class="stat-card">
+              <div class="stat-label">Δ Captive gen</div>
+              <div class="stat-value" id="captiveGen">83,2 TWh</div>
+              <div class="stat-detail">= 19 GW × CF × 8.760</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Δ PLN industri</div>
+              <div class="stat-value">14,07 TWh</div>
+              <div class="stat-detail">PLN (fixed)</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Δ Total</div>
+              <div class="stat-value" id="totalDelta">97,3 TWh</div>
+              <div class="stat-detail">Penambahan 5 tahun</div>
+            </div>
+            <div class="stat-card green">
+              <div class="stat-label">Total growth</div>
+              <div class="stat-value" id="totalGrowth">+70%</div>
+              <div class="stat-detail">vs Manuf VA +20,5%</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="big-display">
+            <div class="big-label">Share captive dalam penambahan</div>
+            <div class="big-value good" id="shareCaptive">85,5%</div>
+            <div class="big-sub" id="shareInterp">Captive mendominasi penambahan kebutuhan listrik industri</div>
+          </div>
+
+          <div class="balance-viz">
+            <div class="balance-col">
+              <div class="balance-bar-stack" id="bar2019" style="height: 60%;">
+                <div class="balance-segment captive" id="seg2019Captive" style="height: 44%;">61</div>
+                <div class="balance-segment pln" style="height: 56%;">77</div>
+              </div>
+              <div class="balance-total" id="total2019">138 TWh</div>
+              <div class="balance-year-label">2019</div>
+            </div>
+            <div class="balance-col">
+              <div class="balance-bar-stack" id="bar2024" style="height: 100%;">
+                <div class="balance-segment captive" id="seg2024Captive" style="height: 61%;">144</div>
+                <div class="balance-segment pln" style="height: 39%;">91</div>
+              </div>
+              <div class="balance-total" id="total2024">236 TWh</div>
+              <div class="balance-year-label">2024</div>
+            </div>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-mute); text-align: center; margin-top: 8px;">
+            <span style="color: var(--teal);">■</span> PLN industri &nbsp;·&nbsp;
+            <span style="color: var(--rust);">■</span> Captive generation
+          </p>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <strong>Robustness check:</strong> CF 20% (sangat konservatif) → share captive <strong>70%</strong>. CF 70% (sangat agresif) → share captive <strong>89%</strong>. Tidak ada CF wajar di mana PLN jadi sumber utama penambahan kebutuhan listrik industri.
+      </div>
+    </div>
+
+    <h3>Bukti 5 — Decoupling visible di data BPS 2014–2026</h3>
+    <p>Kalau industri makin pakai captive, kita seharusnya melihat hubungan yang makin renggang antara growth Ketenagalistrikan (PLN/IPP yang terjual) dan growth Manufaktur (output industri total, termasuk captive). Data BPS time series memperlihatkan persis pola ini, dan Q1-2026 adalah outlier unprecedented:</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Q1 Y-on-Y Growth: Ketenagalistrikan vs Industri Pengolahan, 2014–2026</div>
+      <div class="chart-sub">Historis: bergerak bersama. 2026: gap +5,29 pp — terbesar dalam 13 tahun.</div>
+      <div class="chart-wrap tall"><canvas id="chartDecoupling"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a> dan PDB Lapangan Usaha Seri 2010. Rata-rata gap 2014–2023: ±1-2 pp. Q1-2026: Manuf +5,04%, Listrik −0,25%, gap +5,29 pp — outlier 13 tahun.</div>
+    </div>
+
+    <h3>Catatan teknis: kenapa VA captive tidak masuk Sektor D</h3>
+    <p>Per <em>System of National Accounts 2008</em> yang dipakai BPS, listrik yang diproduksi industri untuk konsumsi sendiri (<em>non-market output</em>) mengikuti <strong>principal activity rule</strong>: nilai tambahnya tercatat di sektor industri utama (manufaktur, pertambangan), bukan di Sektor D. Ketika pabrik nikel Morowali bakar batubara 6 GW untuk smelter sendiri, VA-nya masuk Sektor C Industri Pengolahan — bukan Sektor D Pengadaan Listrik. Inilah mengapa Sektor D bisa stagnan sementara Sektor C tetap tumbuh.</p>
+
+    <div class="verdict strong">
+      <div class="verdict-label">Verdict Tes 4</div>
+      <div class="verdict-title">YA — industri tumbuh karena listriknya dari captive, bukan PLN</div>
+      <div class="verdict-body">Lima bukti konvergen: (1) listrik PLN didominasi RT bukan industri (IO 2016: 14,75% vs 9,81%), (2) industri padat listrik historically beli bahan bakar 2-11× lebih banyak dari listrik PLN, (3) kapasitas captive 14 → 33 GW dalam 5 tahun, (4) 85% pertumbuhan kebutuhan listrik industri 2019-2024 dari captive (robust di CF 20-80%), (5) gap Q1 Listrik-Manuf 2026 +5,29 pp terbesar dalam 13 tahun. Sektor D −0,25% sama sekali tidak kontradiksi dengan Sektor C +5,04% — justru konsekuensi struktur ekonomi listrik Indonesia.</div>
+    </div>
+  </section>
+
+  <!-- ========== BAGIAN 07: KESIMPULAN ========== -->
+  <section id="kesimpulan">
+    <div class="section-number">Bagian 07 — Kesimpulan</div>
+    <h2 class="section-title">Kesimpulan</h2>
+
+    <p class="lead">Empat tes empiris memberi jawaban tegas: <em>klaim utama LPEM tidak berdiri di atas data yang kuat.</em></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Tes</th>
+            <th>Pertanyaan</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>"Listrik turun -0,99%" akurat?</td><td><span style="color:var(--crimson);font-weight:600;">LEMAH</span> — yang turun adalah gas (-8,49%), listrik hanya -0,25%</td></tr>
+          <tr><td>2</td><td>Manufaktur memang tumbuh?</td><td><span style="color:#5A6E2A;font-weight:600;">YA</span> — 8 indikator independen kompak menunjukkan ekspansi</td></tr>
+          <tr><td>3</td><td>High base dari diskon listrik 2025?</td><td><span style="color:#5A6E2A;font-weight:600;">TERBUKTI</span> — Q1-2024 (+7,78%) + Q1-2025 (+5,60%) anomalously tinggi → Q1-2026 mean-reversion</td></tr>
+          <tr><td>4</td><td>Industri tumbuh karena captive sendiri?</td><td><span style="color:#5A6E2A;font-weight:600;">TERBUKTI</span> — IO 2016: RT 14,75% &gt; Manuf 9,81%, plus <strong>85,5%</strong> pertumbuhan kebutuhan listrik industri 2019-2024 dari captive</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tiga statement penutup</h3>
+
+    <p><strong>Pertama, 5,61% secara aritmetik benar dan dapat ditelusuri.</strong> Dekomposisi dari 17 sektor + pajak-subsidi menghasilkan tepat 5,61%. BPS tidak mengarang headline.</p>
+
+    <p><strong>Kedua, argumen LPEM tentang listrik-manufaktur secara empiris lemah.</strong> Penurunan -0,99% di sektor D didominasi oleh gas (-8,49%), bukan listrik. Sub-sektor Ketenagalistrikan hanya turun -0,25% — bahkan penurunan tipis ini dapat dijelaskan oleh dua mekanisme empiris yang terdokumentasi:</p>
+
+    <ul style="margin-left: 24px; margin-bottom: 18px; max-width: 720px;">
+      <li style="margin-bottom: 8px;"><strong>High base effect</strong> dari diskon listrik 50% Jan-Feb 2025 yang menyasar 81,42 juta pelanggan rumah tangga, mendorong front-loading pembelian token prabayar di Q1 2025.</li>
+      <li style="margin-bottom: 8px;"><strong>Captive power growth</strong> dari 14 GW (2019) ke 33 GW (2024), plus PLTS atap dari 80 MW (2022) ke 1.300 MW (April 2026), menyerap permintaan listrik industri tanpa lewat PLN.</li>
+    </ul>
+
+    <p><strong>Ketiga, indikator independen kompak menunjukkan manufaktur memang tumbuh.</strong> IKBM 51,37 (ekspansi), PMI BI 52,03, impor bahan baku primer +31,77%, PMTB mesin +10,78%, dan PLN industrial sales 2025 +2,5%. Tidak ada satu pun indikator independen yang mendukung skenario LPEM "manufaktur tumbuh 1,5%" atau "−6%".</p>
+
+    <p><strong>Keempat, bukti kuantitatif dari struktur dan neraca listrik industri.</strong> Tabel Input-Output BPS 2016 menunjukkan listrik PLN didominasi rumah tangga (14,75%), bukan industri pengolahan (9,81%) — kalau RT turun karena hilangnya diskon 2025, sektor D turun tanpa industri perlu turun. Plus industri padat listrik (semen, smelter, kimia) historically membeli bahan bakar 2-11× lebih banyak dari listrik PLN — untuk pembangkit captive sendiri. Aplikasi formula $E_{industri} = E_{PLN} + E_{captive}$ pada data 2019–2024 (PLN + IESR) menghasilkan: dari 97,3 TWh penambahan kebutuhan listrik industri lima tahun terakhir, <strong>85,5% datang dari captive power</strong>. Robust di CF 20-80%. Kalau LPEM mengukur aktivitas industri lewat lensa konsumsi PLN saja, dia melihat kurang dari 15% dari realitas.</p>
+
+    <div class="key-result">
+      <div class="key-result-label">Kesimpulan akhir</div>
+      <p style="font-family: var(--font-display); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--cream); max-width: none;">
+        Rilis BPS 5,61% adalah hasil aritmetika yang dapat ditelusuri dari level VA eksak.<br/>
+        Kritik LPEM bertumpu pada premis empiris yang keliru —<br/>
+        <strong style="color: #B5D27A;">85,5%</strong> pertumbuhan kebutuhan listrik industri datang dari captive,<br/>
+        dan indikator independen manufaktur kompak menunjukkan ekspansi.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <h4>Sumber Data</h4>
+    <ul>
+      <li><a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS — Berita Resmi Statistik Q1-2026 (5 Mei 2026), PDB Lapangan Usaha</a></li>
+      <li><a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS — Tabel PDB Menurut Pengeluaran Triwulanan, Q1-2026</a></li>
+      <li><a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS — Tabel Input-Output Indonesia Transaksi Domestik Atas Dasar Harga Produsen, 52 Industri, 2016</a></li>
+      <li><a href="https://www.bi.go.id/id/publikasi/laporan/Pages/PMI-BI-Triwulan-I-2026.aspx" target="_blank">Bank Indonesia — Prompt Manufacturing Index (PMI BI) Q1-2026</a></li>
+      <li><a href="https://web.pln.co.id/media/siaran-pers/2026/02/konsumsi-listrik-nasional-tumbuh-pln-catat-penjualan-31769-twh-di-2025" target="_blank">PT PLN (Persero) — Siaran Pers 1 Februari 2026, "Penjualan Listrik 317,69 TWh di 2025"</a></li>
+      <li><a href="https://jdih.esdm.go.id/dokumen/peraturan/KepmenESDM%20Nomor%20348.K-TL.01-MEM.L-2024%20Tahun%202024" target="_blank">Kementerian ESDM — KepMen No. 348.K/TL.01/MEM.L/2024 (Diskon Listrik 50%)</a></li>
+      <li><a href="https://iesr.or.id/lembar-fakta-pembangkit-listrik-captive/" target="_blank">IESR — Lembar Fakta Pembangkit Listrik Captive (Februari 2026)</a></li>
+      <li><a href="https://energyandcleanair.org/wp/wp-content/uploads/2024/11/ID-Press-release_Indonesia-Captive-Briefing-2024-update.pdf" target="_blank">CREA &amp; Global Energy Monitor — "Tracing Indonesia's Captive Power Growth" (November 2024)</a></li>
+      <li><a href="https://www.kompas.id/artikel/en-dekarbonisasi-pltu-captive-terbentur-pragmatisme-ekonomi-dan-celah-regulasi" target="_blank">Kompas — Dekarbonisasi PLTU Captive (Februari 2026)</a></li>
+      <li>LPEM FEB UI — Special Report Mei 2026</li>
+      <li>Windhiarso Putranto — "Inkonsistensi? Siapa? dan Kapan?" (Mei 2026)</li>
+      <li><a href="https://unstats.un.org/unsd/nationalaccount/sna2008.asp" target="_blank">SNA 2008 — System of National Accounts, UN Statistics Division</a></li>
+    </ul>
+    <p style="margin-top: 32px;">Dibangun untuk <span class="brand">#SemuaBisaDihitung</span> oleh Alif Towew — esai data, bukan opini.</p>
+  </footer>
+
+</div>
+
+<script>
+// ===== INTERACTIVE WIDGETS =====
+
+// Widget #1: PDB Simulator
+const MANUF_BASE = 667654.7;
+const PDB_BASE = 3264589.8;
+const FIXED_OTHER = 2746400.4;  // PDB Q1-2026 minus Manufaktur Q1-2026 (16 sektor + pajak)
+
+function updatePDB() {
+  const slider = document.getElementById('manufSlider');
+  if (!slider) return;
+  const g = parseFloat(slider.value);
+  document.getElementById('manufValue').textContent = (g >= 0 ? '+' : '') + g.toFixed(2) + '%';
+  const newPDB = FIXED_OTHER + MANUF_BASE * (1 + g/100);
+  const growth = (newPDB / PDB_BASE - 1) * 100;
+  const resultEl = document.getElementById('pdbResult');
+  const interpEl = document.getElementById('pdbInterpretation');
+  resultEl.textContent = (growth >= 0 ? '+' : '') + growth.toFixed(2) + '%';
+
+  if (growth >= 5.5) {
+    resultEl.className = 'big-value good';
+    interpEl.textContent = 'Konsisten dengan rilis BPS 5,61%';
+  } else if (growth >= 4.8) {
+    resultEl.className = 'big-value warn';
+    interpEl.textContent = 'Wilayah skenario LPEM (4,6–4,9%)';
+  } else if (growth >= 3.5) {
+    resultEl.className = 'big-value alert';
+    interpEl.textContent = 'Pertumbuhan rendah — bertentangan dengan IKBM dan PMI';
+  } else {
+    resultEl.className = 'big-value alert';
+    interpEl.textContent = 'Krisis manufaktur — bertentangan dengan semua indikator';
+  }
+}
+
+// Widget #2: Sektor D Decomposer
+const W_LISTRIK = 0.9096;
+const W_GAS = 0.0904;
+
+function updateD() {
+  const listrikSlider = document.getElementById('listrikSlider');
+  const gasSlider = document.getElementById('gasSlider');
+  if (!listrikSlider || !gasSlider) return;
+  const gL = parseFloat(listrikSlider.value);
+  const gG = parseFloat(gasSlider.value);
+  document.getElementById('listrikValue').textContent = (gL >= 0 ? '+' : '') + gL.toFixed(2) + '%';
+  document.getElementById('gasValue').textContent = (gG >= 0 ? '+' : '') + gG.toFixed(2) + '%';
+
+  const cL = W_LISTRIK * gL;
+  const cG = W_GAS * gG;
+  const gD = cL + cG;
+  const dResult = document.getElementById('dResult');
+  dResult.textContent = (gD >= 0 ? '+' : '') + gD.toFixed(2) + '%';
+  document.getElementById('dContrib').textContent =
+    `Listrik: ${(cL >= 0 ? '+' : '')}${cL.toFixed(2)} pp · Gas: ${(cG >= 0 ? '+' : '')}${cG.toFixed(2)} pp`;
+
+  if (gD < -0.5) dResult.className = 'big-value alert';
+  else if (gD < 0.5) dResult.className = 'big-value warn';
+  else dResult.className = 'big-value good';
+}
+
+// Widget #3: Captive Calculator
+const DELTA_PLN = 14.07;       // TWh, fixed
+const DELTA_CAP_GW = 19;       // GW, fixed
+const HRS_YEAR = 8.76;          // thousand hours = 8760/1000 for TWh units
+const PLN_2019 = 77;
+const CAP_2019_GW = 14;
+const PLN_2024 = 91.07;
+const CAP_2024_GW = 33;
+
+function updateCaptive() {
+  const slider = document.getElementById('cfSlider');
+  if (!slider) return;
+  const cfPct = parseFloat(slider.value);
+  const cf = cfPct / 100;
+  document.getElementById('cfValue').textContent = cfPct + '%';
+
+  // Generation calculations
+  const cap2019 = CAP_2019_GW * cf * HRS_YEAR;
+  const cap2024 = CAP_2024_GW * cf * HRS_YEAR;
+  const deltaCap = cap2024 - cap2019;
+  const total2019 = PLN_2019 + cap2019;
+  const total2024 = PLN_2024 + cap2024;
+  const totalDelta = total2024 - total2019;
+  const totalGrowthPct = (total2024 / total2019 - 1) * 100;
+  const shareCap = (deltaCap / totalDelta) * 100;
+
+  document.getElementById('captiveGen').textContent = deltaCap.toFixed(1) + ' TWh';
+  document.getElementById('totalDelta').textContent = totalDelta.toFixed(1) + ' TWh';
+  document.getElementById('totalGrowth').textContent = '+' + totalGrowthPct.toFixed(0) + '%';
+
+  const shareEl = document.getElementById('shareCaptive');
+  shareEl.textContent = shareCap.toFixed(1) + '%';
+  const interpEl = document.getElementById('shareInterp');
+  if (shareCap >= 80) {
+    shareEl.className = 'big-value good';
+    interpEl.textContent = 'Captive dominan — PLN minor (<20%)';
+  } else if (shareCap >= 60) {
+    shareEl.className = 'big-value good';
+    interpEl.textContent = 'Captive mayoritas';
+  } else {
+    shareEl.className = 'big-value warn';
+    interpEl.textContent = 'Captive masih dominan tapi PLN kontribusi signifikan';
+  }
+
+  // Update balance viz heights (proportional)
+  const maxTotal = Math.max(total2024, 250);
+  const h2019 = (total2019 / maxTotal) * 100;
+  const h2024 = (total2024 / maxTotal) * 100;
+  document.getElementById('bar2019').style.height = h2019 + '%';
+  document.getElementById('bar2024').style.height = h2024 + '%';
+  // Within each stack, segments proportional
+  document.getElementById('seg2019Captive').style.height = (cap2019/total2019*100) + '%';
+  document.getElementById('seg2019Captive').textContent = cap2019.toFixed(0);
+  document.getElementById('seg2024Captive').style.height = (cap2024/total2024*100) + '%';
+  document.getElementById('seg2024Captive').textContent = cap2024.toFixed(0);
+  document.getElementById('total2019').textContent = total2019.toFixed(0) + ' TWh';
+  document.getElementById('total2024').textContent = total2024.toFixed(0) + ' TWh';
+}
+
+// Attach listeners after DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  const m = document.getElementById('manufSlider');
+  if (m) { m.addEventListener('input', updatePDB); updatePDB(); }
+  const l = document.getElementById('listrikSlider');
+  const g = document.getElementById('gasSlider');
+  if (l && g) {
+    l.addEventListener('input', updateD); g.addEventListener('input', updateD); updateD();
+  }
+  const c = document.getElementById('cfSlider');
+  if (c) { c.addEventListener('input', updateCaptive); updateCaptive(); }
+});
+</script>
+
+<script>
+window.addEventListener('load', function() {
+  Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
+  Chart.defaults.color = '#3D3934';
+  Chart.defaults.borderColor = '#D9D1C2';
+
+  const commonOpts = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom', labels: { font: { family: 'JetBrains Mono', size: 11 }, padding: 14, boxWidth: 12 } },
+      tooltip: { backgroundColor: '#1A1815', titleFont: { family: 'JetBrains Mono', size: 11 }, bodyFont: { family: 'JetBrains Mono', size: 12 } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { family: 'JetBrains Mono', size: 11 } } },
+      y: { grid: { color: '#E8E1D2' }, ticks: { font: { family: 'JetBrains Mono', size: 11 } } }
+    }
+  };
+
+  // Chart 1: Listrik vs Gas vs Sektor D total
+  new Chart(document.getElementById('chartListrikGas'), {
+    type: 'line',
+    data: {
+      labels: ['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
+      datasets: [
+        { label: 'Ketenagalistrikan', data: [2.91,3.79,8.56,1.73,3.50,5.72,4.17,1.65,8.09,2.01,7.78,5.60,-0.25],
+          borderColor: '#9C5A3F', backgroundColor: '#9C5A3F', tension: 0.2, pointRadius: 4, pointHoverRadius: 6 },
+        { label: 'Pengadaan Gas', data: [5.30,-8.95,1.26,0.77,2.04,-6.22,1.55,1.92,-0.82,8.03,-13.34,0.49,-8.49],
+          borderColor: '#6D6760', backgroundColor: '#6D6760', tension: 0.2, pointRadius: 4, pointHoverRadius: 6, borderDash: [4,4] },
+        { label: 'Sektor D Total', data: [3.29,1.73,7.50,1.60,3.31,4.12,3.85,1.68,7.04,2.67,5.35,5.11,-0.99],
+          borderColor: '#1A1815', backgroundColor: '#1A1815', tension: 0.2, pointRadius: 3 }
+      ]
+    },
+    options: { ...commonOpts, scales: { ...commonOpts.scales, y: { ...commonOpts.scales.y, ticks: { ...commonOpts.scales.y.ticks, callback: v => v + '%' } } } }
+  });
+
+  // Chart Q1 Ketenagalistrikan VA Growth (Bagian 05) — Q1 hanya, 2018-2026
+  new Chart(document.getElementById('chartKetenagalistrikanQ1'), {
+    type: 'bar',
+    data: {
+      labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+      datasets: [{
+        label: 'Q1 Ketenagalistrikan VA Growth (% YoY)',
+        data: [3.50, 5.72, 4.17, 1.65, 8.09, 2.01, 7.78, 5.60, -0.25],
+        backgroundColor: (ctx) => {
+          const i = ctx.dataIndex;
+          const v = ctx.parsed?.y ?? ctx.raw;
+          if (i === 6 || i === 7) return '#B8893A';  // Q1-2024, Q1-2025 anomalously high
+          if (i === 8) return '#7A2E2E';              // Q1-2026 negative
+          return '#6D6760';                            // normal years
+        },
+        borderRadius: 4
+      }]
+    },
+    options: { ...commonOpts,
+      plugins: { ...commonOpts.plugins, legend: { display: false },
+        tooltip: { ...commonOpts.plugins.tooltip,
+          callbacks: { label: ctx => (ctx.parsed.y >= 0 ? '+' : '') + ctx.parsed.y.toFixed(2) + '%' } } },
+      scales: { ...commonOpts.scales,
+        y: { ...commonOpts.scales.y,
+          ticks: { ...commonOpts.scales.y.ticks, callback: v => (v >= 0 ? '+' : '') + v + '%' } }
+      }
+    }
+  });
+
+  // Chart IO Listrik — distribusi output Ketenagalistrikan 2016 (Bagian 06, Bukti 1)
+  new Chart(document.getElementById('chartIOListrik'), {
+    type: 'doughnut',
+    data: {
+      labels: [
+        'Self-consumption (T&D losses + intra-sektor)',
+        'Konsumsi Rumah Tangga',
+        'Industri Pengolahan (C)',
+        'Jasa Infokom',
+        'Transportasi',
+        'Konstruksi + Perdagangan',
+        'Adm Pemerintah + Jasa Lainnya',
+        'Sektor lain'
+      ],
+      datasets: [{
+        data: [48.02, 14.75, 9.81, 5.19, 4.13, 6.74, 5.68, 5.68],
+        backgroundColor: [
+          '#6D6760',  // self (gray)
+          '#9C5A3F',  // RT (rust) — highlight
+          '#B8893A',  // manuf (gold)
+          '#4B7B6A',  // infokom
+          '#A39B91',
+          '#D9D1C2',
+          '#E8E1D2',
+          '#F0E9D8'
+        ],
+        borderColor: '#F7F3EA',
+        borderWidth: 2
+      }]
+    },
+    options: { ...commonOpts, scales: {},
+      plugins: { ...commonOpts.plugins,
+        legend: { position: 'right', labels: { font: { family: 'JetBrains Mono', size: 11 }, padding: 8, boxWidth: 12 } },
+        tooltip: { ...commonOpts.plugins.tooltip,
+          callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed.toFixed(2) + '%' } }
+      }
+    }
+  });
+
+  // Chart Bahan Bakar — rasio bahan bakar/listrik PLN per industri padat energi (IO 2016)
+  new Chart(document.getElementById('chartBahanBakar'), {
+    type: 'bar',
+    data: {
+      labels: [
+        'I-19 Kimia',
+        'I-21 Semen/Galian',
+        'I-22 Logam Dasar (smelter)',
+        'I-18 Kertas'
+      ],
+      datasets: [
+        {
+          label: '% Listrik PLN dari output',
+          data: [1.06, 3.12, 2.35, 0.95],
+          backgroundColor: '#4B7B6A',
+          borderRadius: 4
+        },
+        {
+          label: '% Bahan Bakar (batubara+migas+BBM+gas) dari output',
+          data: [11.88, 15.15, 5.81, 2.01],
+          backgroundColor: '#9C5A3F',
+          borderRadius: 4
+        }
+      ]
+    },
+    options: { ...commonOpts,
+      indexAxis: 'y',
+      plugins: { ...commonOpts.plugins,
+        tooltip: { ...commonOpts.plugins.tooltip,
+          callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.parsed.x.toFixed(2) + '%' } } },
+      scales: {
+        x: { grid: { color: '#E8E1D2' }, ticks: { font: { family: 'JetBrains Mono', size: 11 }, callback: v => v + '%' } },
+        y: { grid: { display: false }, ticks: { font: { family: 'JetBrains Mono', size: 11 } } }
+      }
+    }
+  });
+
+  // Chart Captive Power yearly 2019-2025
+  new Chart(document.getElementById('chartCaptive'), {
+    type: 'bar',
+    data: {
+      labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      datasets: [
+        {
+          label: 'PLTU Batubara Captive (GW) — CREA-GEM yearly',
+          data: [5.7, 6.5, 7.8, 9.3, 10.7, 17.1, 19.3],
+          backgroundColor: '#1A1815',
+          borderRadius: 4,
+          order: 2
+        },
+        {
+          label: 'Total Captive Semua Jenis (GW) — IESR endpoints',
+          type: 'line',
+          data: [14, null, null, null, null, 33, null],
+          borderColor: '#9C5A3F',
+          backgroundColor: '#9C5A3F',
+          borderWidth: 3,
+          pointRadius: 8,
+          pointHoverRadius: 10,
+          pointBackgroundColor: '#9C5A3F',
+          spanGaps: true,
+          tension: 0,
+          borderDash: [6, 4],
+          order: 1
+        }
+      ]
+    },
+    options: { ...commonOpts,
+      plugins: { ...commonOpts.plugins,
+        legend: { display: true, position: 'bottom',
+          labels: { font: { family: 'JetBrains Mono', size: 11 }, padding: 12, boxWidth: 14 } },
+        tooltip: {
+          ...commonOpts.plugins.tooltip,
+          callbacks: { label: ctx => {
+            if (ctx.parsed.y === null) return '';
+            return ctx.dataset.label.split(' — ')[0] + ': ' + ctx.parsed.y + ' GW';
+          } }
+        }
+      },
+      scales: { ...commonOpts.scales,
+        y: { ...commonOpts.scales.y,
+          beginAtZero: true,
+          ticks: { ...commonOpts.scales.y.ticks, callback: v => v + ' GW' } }
+      }
+    }
+  });
+
+  // Chart 7 (NEW): Decoupling — Q1 Ketenagalistrikan vs Manufaktur VA Growth 2014-2026
+  new Chart(document.getElementById('chartDecoupling'), {
+    type: 'line',
+    data: {
+      labels: ['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
+      datasets: [
+        {
+          label: 'Ketenagalistrikan VA (Q1 YoY)',
+          data: [2.91,3.79,8.56,1.73,3.50,5.72,4.17,1.65,8.09,2.01,7.78,5.60,-0.25],
+          borderColor: '#9C5A3F',
+          backgroundColor: '#9C5A3F',
+          tension: 0.2,
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          borderWidth: 2.5
+        },
+        {
+          label: 'Industri Pengolahan VA (Q1 YoY)',
+          data: [4.45,4.07,4.68,4.28,4.61,3.85,2.06,-1.38,5.07,4.43,4.13,4.55,5.04],
+          borderColor: '#4B7B6A',
+          backgroundColor: '#4B7B6A',
+          tension: 0.2,
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          borderWidth: 2.5
+        }
+      ]
+    },
+    options: { ...commonOpts,
+      plugins: { ...commonOpts.plugins,
+        tooltip: { ...commonOpts.plugins.tooltip,
+          callbacks: { label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y >= 0 ? '+' : '') + ctx.parsed.y.toFixed(2) + '%' } } },
+      scales: { ...commonOpts.scales,
+        y: { ...commonOpts.scales.y, ticks: { ...commonOpts.scales.y.ticks, callback: v => (v >= 0 ? '+' : '') + v + '%' } }
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
