@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>5,61% — Asalnya Jelas. Kritiknya Bagaimana?</title>
+<title>Pertumbuhan PDB Indonesia Q1-2026: Validitas Data dan Tinjauan Kritik LPEM</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -416,12 +416,12 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-tag">#SemuaBisaDihitung — Edisi Kritik PDB</div>
-    <h1 class="hero-title">5,61% — Asalnya jelas. <em>Kritiknya bagaimana?</em></h1>
-    <p class="hero-subtitle">Dari mana datangnya pertumbuhan PDB Indonesia Q1-2026 sebesar 5,61%, dan apakah kritik LPEM yang menyebut angka itu "seharusnya" 4,6–4,9% berdiri di atas data yang kuat? Esai data dari publikasi resmi BPS, PLN, dan IESR — bukan tebakan.</p>
+    <div class="hero-tag">#SemuaBisaDihitung — Analisis Pertumbuhan PDB Q1-2026</div>
+    <h1 class="hero-title">5,61% Pertumbuhan PDB Indonesia Q1-2026: <em>Validitas Data dan Tinjauan atas Kritik LPEM</em></h1>
+    <p class="hero-subtitle">Analisis empiris terhadap rilis resmi Badan Pusat Statistik (BPS) tentang pertumbuhan ekonomi Indonesia triwulan I-2026, serta evaluasi kritik dari LPEM FEB UI yang menyatakan angka tersebut "seharusnya" berada di kisaran 4,6–4,9%. Semua argumentasi dibangun dari data publikasi resmi BPS, PLN, ESDM, dan lembaga riset terkait.</p>
     <div class="hero-meta">
-      <div><strong>Sumber data</strong> &nbsp;BPS, PLN, ESDM, IESR</div>
-      <div><strong>Bandingkan</strong> &nbsp;LPEM Special Report Mei 2026</div>
+      <div><strong>Sumber data</strong> &nbsp;BPS, PLN, ESDM, IESR, CREA-GEM, Bank Indonesia</div>
+      <div><strong>Subjek tinjauan</strong> &nbsp;LPEM FEB UI Special Report Mei 2026</div>
     </div>
   </div>
 
@@ -492,10 +492,81 @@
 
     <p>Dari premis ini, LPEM membangun skenario alternatif dengan asumsi manufaktur hanya tumbuh ~1,5%. Hasilnya: PDB terkoreksi sebesar 4,89% — bukan 5,61%.</p>
 
-    <p>Argumen ini terdengar logis pada permukaan. Tapi empat tes berikut menunjukkan bahwa data tidak mendukungnya.</p>
+    <p>Argumen ini terdengar logis pada permukaan. Namun analisis empat tes empiris berikut menunjukkan bahwa data tidak mendukungnya. Sebelum masuk ke pengujian, mari kita pahami terlebih dahulu prinsip dasar daya ungkit sektoral terhadap PDB.</p>
 
-    <h3>🎯 Dashboard Interaktif #1 — PDB Simulator</h3>
-    <p>Sebelum masuk ke tes, mainkan slider di bawah. Ubah asumsi growth Manufaktur, lihat dampaknya ke PDB total. Pertanyaan: berapa rendah manufaktur harus tumbuh untuk dapat angka koreksi LPEM (4,89%)?</p>
+    <h3>Daya Ungkit Sektoral: Mengapa Manufaktur 19,5× Lebih Berpengaruh dari Sektor Listrik & Gas</h3>
+
+    <p>PDB Indonesia disusun dari kontribusi 17 lapangan usaha, masing-masing dengan pangsa yang berbeda. Sebelum menerima argumen "listrik turun, manufaktur ikut turun," penting untuk memahami pangsa kedua sektor terhadap PDB total:</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Pangsa Sektor terhadap PDB ADHK Indonesia Q1-2025 (Baseline)</div>
+      <div class="chart-sub">Sektor Industri Pengolahan 20,45% &gt;&gt; Pengadaan Listrik & Gas 1,05% (rasio 19,5×)</div>
+      <div class="chart-wrap"><canvas id="chartPangsa"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a>. Sektor utilitas (Pengadaan Listrik & Gas) memiliki pangsa yang sangat kecil terhadap PDB total. Ini bukan anomali Indonesia — pola serupa terjadi di sebagian besar negara: sektor utilitas adalah "input" bagi sektor produktif lain, bukan kontributor langsung utama.</div>
+    </div>
+
+    <h4>Matematika kontribusi terhadap pertumbuhan PDB</h4>
+
+    <p>Pertumbuhan PDB total adalah penjumlahan kontribusi setiap sektor, di mana kontribusi suatu sektor terhadap pertumbuhan PDB total dirumuskan sebagai:</p>
+
+    <div class="formula">
+      <div class="formula-label">Kontribusi sektor i terhadap pertumbuhan PDB</div>
+      $$\text{Kontribusi}_i = \text{Pangsa}_i \times \text{Growth}_i$$
+    </div>
+
+    <p>Dengan rumus ini, kita dapat menghitung dampak nyata setiap sektor pada Q1-2026:</p>
+
+    <div class="table-caption">Tabel 4. Kontribusi Sektor C dan D terhadap Pertumbuhan PDB Q1-2026</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sektor</th>
+            <th class="num-col">Pangsa PDB (%)</th>
+            <th class="num-col">Pertumbuhan (%)</th>
+            <th class="num-col">Kontribusi (pp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td><strong>C — Industri Pengolahan</strong></td>
+            <td class="num-col"><strong>20,45%</strong></td>
+            <td class="num-col"><strong>+5,04%</strong></td>
+            <td class="num-col pos"><strong>+1,030 pp</strong></td>
+          </tr>
+          <tr>
+            <td>D — Pengadaan Listrik & Gas</td>
+            <td class="num-col">1,05%</td>
+            <td class="num-col">−0,99%</td>
+            <td class="num-col neg">−0,010 pp</td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;↳ Ketenagalistrikan (sub-sektor)</td>
+            <td class="num-col">0,96%</td>
+            <td class="num-col">−0,25%</td>
+            <td class="num-col neg">−0,002 pp</td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;↳ Pengadaan Gas (sub-sektor)</td>
+            <td class="num-col">0,10%</td>
+            <td class="num-col">−8,49%</td>
+            <td class="num-col neg">−0,008 pp</td>
+          </tr>
+          <tr class="total">
+            <td>Selisih kontribusi (C − D)</td>
+            <td colspan="2" class="num-col" style="text-align: center;">Manuf menambah 103× lebih banyak ke PDB</td>
+            <td class="num-col pos"><strong>+1,040 pp</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="insight-box">
+      <strong>Implikasi matematis:</strong> Untuk membatalkan kontribusi positif Sektor C sebesar +1,030 pp, Sektor D harus mengalami kontraksi sekitar <strong>−98%</strong> dalam satu kuartal — yang artinya hampir seluruh pembangkit listrik dan distribusi gas di Indonesia berhenti beroperasi. Skenario seperti ini secara fisik mustahil. Dengan demikian, kontraksi tipis −0,99% pada Sektor D <em>tidak memiliki daya ungkit yang cukup</em> untuk membatalkan ekspansi Sektor C, apapun argumen kausalitas yang dibangun.
+    </div>
+
+    <h4>Kalkulator Sensitivitas — Pengaruh Pertumbuhan Manufaktur terhadap PDB</h4>
+    <p>Setelah memahami daya ungkit sektoral, mari uji secara interaktif: berapa rendah pertumbuhan Manufaktur harus turun untuk konsisten dengan angka koreksi LPEM (4,89%)? Geser slider di bawah untuk melakukan simulasi.</p>
 
     <div class="widget">
       <div class="widget-label">Live Calculator</div>
@@ -541,7 +612,7 @@
       </div>
 
       <div class="insight-box">
-        <strong>Insight:</strong> Setiap 1 percentage point perubahan growth Manufaktur menggeser PDB sekitar 0,21 pp. Untuk dapat angka koreksi LPEM 4,89%, Manufaktur harus tumbuh hanya 1,5% — jauh di bawah semua indikator independen (IKBM 51,37, PMI 52,03, impor bahan baku primer +31,77%, PMTB mesin +10,78%). Tiga tes berikut menunjukkan kenapa skenario LPEM ini tidak konsisten dengan data lapangan.
+        <strong>Analisis:</strong> Setiap 1 percentage point perubahan pertumbuhan Manufaktur menggeser PDB total sekitar 0,21 pp. Untuk mencapai angka koreksi LPEM 4,89%, Manufaktur harus tumbuh hanya 1,5% — jauh di bawah seluruh indikator independen yang tersedia (IKBM 51,37, PMI BI 52,03, impor bahan baku primer +31,77%, PMTB mesin +10,78%). Empat tes berikut menjelaskan secara sistematis mengapa skenario LPEM tidak konsisten dengan data lapangan.
       </div>
     </div>
   </section>
@@ -582,8 +653,8 @@
       <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026 (5 Mei 2026)</a> dan seri PDB Lapangan Usaha ADHK 2010 historis. Pengadaan Gas memang sangat volatile (-13,34% di Q1-2024, -8,49% di Q1-2026). Ketenagalistrikan relatively stabil; -0,25% di Q1-2026 adalah perlambatan dari +5,60% di Q1-2025.</div>
     </div>
 
-    <h3>🎯 Dashboard Interaktif #2 — Sektor D Decomposer</h3>
-    <p>Geser dua slider di bawah. Buktikan bahwa -0,99% sektor D didominasi gas, bukan listrik. Coba: set Ketenagalistrikan = 0% (asumsi listrik tidak turun sama sekali) — apa yang terjadi dengan total sektor D?</p>
+    <h3>Kalkulator Dekomposisi — Kontribusi Listrik dan Gas pada Sektor D</h3>
+    <p>Geser dua slider berikut untuk memahami komposisi penurunan −0,99% sektor D Pengadaan Listrik & Gas pada Q1-2026. Coba atur Ketenagalistrikan ke 0% (asumsi tidak terjadi penurunan): bagaimana perubahan pada total sektor D?</p>
 
     <div class="widget">
       <div class="widget-label">Live Decomposer</div>
@@ -627,13 +698,13 @@
       </div>
 
       <div class="insight-box">
-        <strong>Insight:</strong> Coba set Listrik = 0% (asumsi tidak turun) dan biarkan Gas di -8,49%. Hasil: Sektor D masih turun ~-0,77%. <strong>Gas mendominasi total kontraksi.</strong> Sebaliknya, kalau Listrik di -0,25% tapi Gas = 0%, Sektor D hanya turun -0,23% — kecil dan tidak akan jadi headline. Argumen LPEM yang menyebut "listrik turun -0,99%" sebenarnya angka campuran yang didominasi gas.
+        <strong>Analisis:</strong> Apabila Ketenagalistrikan ditetapkan ke 0% (asumsi tidak terjadi penurunan) dan Pengadaan Gas tetap di −8,49%, hasilnya: Sektor D masih akan turun sekitar −0,77%. Pengadaan Gas mendominasi total kontraksi. Sebaliknya, jika Ketenagalistrikan tetap di −0,25% namun Pengadaan Gas = 0%, Sektor D hanya turun −0,23% — angka yang kecil dan tidak signifikan. Klaim LPEM bahwa "listrik turun −0,99%" sebenarnya mengacu pada angka agregat yang didominasi oleh penurunan Pengadaan Gas, bukan Ketenagalistrikan.
       </div>
     </div>
 
     <div class="verdict weak">
       <div class="verdict-label">Verdict Tes 1</div>
-      <div class="verdict-title">Klaim "listrik turun -0,99%" technically misleading</div>
+      <div class="verdict-title">Klaim "listrik turun -0,99%" secara teknis menyesatkan</div>
       <div class="verdict-body">Yang turun signifikan adalah <em>gas</em>, bukan <em>listrik</em>. Sub-sektor Ketenagalistrikan hanya turun -0,25% — perlambatan, bukan kontraksi tajam. LPEM membangun argumen tentang hubungan manufaktur-listrik dari angka campuran listrik+gas.</div>
     </div>
   </section>
@@ -693,7 +764,7 @@
 
     <p>Semua indikator ini bersifat <em>independen dari satu sama lain</em> dan diukur dengan metodologi berbeda: IKBM lewat survei perusahaan (24.182 sampel), PMI lewat survei BI, impor lewat data bea cukai, PMTB lewat survei investasi. Kalau benar manufaktur "tidak tumbuh", indikator-indikator ini tidak akan kompak menunjukkan ekspansi.</p>
 
-    <p>Logika sederhana: importir mengimpor bahan baku +31,77% karena ada permintaan untuk diolah. Investor menambah mesin +10,78% karena ada proyeksi produksi. Konsistensi multi-indikator inilah yang sulit dijelaskan oleh narrative "manufaktur tidak tumbuh".</p>
+    <p>Logikanya jelas: importir hanya akan mendatangkan bahan baku dengan pertumbuhan +31,77% apabila terdapat permintaan untuk pengolahan. Investor hanya akan menambah mesin dengan pertumbuhan +10,78% apabila terdapat proyeksi produksi. Konsistensi lintas-indikator ini sulit dijelaskan oleh narasi "manufaktur tidak tumbuh".</p>
 
     <div class="verdict strong">
       <div class="verdict-label">Verdict Tes 2</div>
@@ -738,30 +809,74 @@
     <p>Mayoritas pelanggan 450 VA dan 900 VA adalah <strong>prabayar</strong>. Dengan harga setengah, mereka bisa beli kWh dua kali lebih banyak untuk uang yang sama. Perilaku rasional: <em>stockpile token</em> selama diskon Jan-Feb 2025, gunakan di bulan-bulan berikutnya. Akibatnya konsumsi tercatat Q1-2025 di-<em>boost</em> oleh akumulasi inventori token. Q1-2026 dengan tarif normal kembali ter-perbandingan dengan Q1-2025 yang elevated → tampil sebagai kontraksi.</p>
 
     <h3>Bukti dari time series Q1 Ketenagalistrikan VA (BPS, 2018–2026)</h3>
-    <p>Kalau hipotesis high base benar, kita seharusnya melihat: Q1-2024 dan Q1-2025 di atas rata-rata historis, Q1-2026 mean-reversion ke wilayah negatif. Data BPS time series mengkonfirmasi ini:</p>
+    <p>Jika hipotesis high base benar, kita seharusnya melihat: Q1-2024 dan Q1-2025 anomalously tinggi (di atas rata-rata historis), dan Q1-2026 menunjukkan mean-reversion ke wilayah yang lebih rendah. Data BPS time series mengonfirmasi pola ini:</p>
 
     <div class="chart-card">
       <div class="chart-title">Pertumbuhan Q1 Ketenagalistrikan VA Y-on-Y, 2018–2026 (BPS)</div>
-      <div class="chart-sub">Rata-rata 2018–2023 ≈ +3,9%. Q1-2024 dan Q1-2025 anomalously tinggi. Q1-2026 normalisasi.</div>
+      <div class="chart-sub">Rata-rata historis 2018–2023: +4,19%. Q1-2024 dan Q1-2025 berada di atas rata-rata. Q1-2026 mean-reversion.</div>
       <div class="chart-wrap"><canvas id="chartKetenagalistrikanQ1"></canvas></div>
-      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a> dan seri PDB Lapangan Usaha ADHK 2010 historis. Rata-rata historis Q1 2018–2023: +3,87%. Q1-2024 (+7,78%) dan Q1-2025 (+5,60%) keduanya di atas rata-rata — Q1-2024 dari recovery pasca-COVID + electrification, Q1-2025 dari diskon listrik. Q1-2026 (−0,25%) adalah mean-reversion terhadap base yang elevated dua tahun berturut-turut.</div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a> dan seri PDB Lapangan Usaha ADHK 2010 historis. Rata-rata historis Q1 2018–2023: +4,19%. Q1-2024 (+7,78%, surplus +3,59 pp) didorong recovery pasca-COVID dan electrification. Q1-2025 (+5,60%, surplus +1,41 pp) didorong diskon listrik 50% untuk 81,42 juta pelanggan RT pada Januari–Februari 2025. Q1-2026 (−0,25%) adalah mean-reversion terhadap basis dua tahun berturut-turut yang elevated.</div>
     </div>
 
     <h3>Hitungan: berapa pp dari −0,25% dijelaskan high base?</h3>
-    <p>Q1-2025 Ketenagalistrikan VA tumbuh +5,60% — surplus ~1,7 pp di atas rata-rata historis +3,87%. Q1-2024 surplus ~3,9 pp di atas rata-rata. Akumulasi dua tahun surplus → basis Q1-2025 di level elevated. Konservatif: kalau separuh swing dari Q1-2025 (+5,60%) ke Q1-2026 (−0,25%) attributable ke high base normalization, maka <em>underlying</em> growth Q1-2026 berkisar +2,5% sampai +3% — perlambatan, bukan kontraksi.</p>
+    <p>Rata-rata historis pertumbuhan Q1 Ketenagalistrikan periode 2018–2023 adalah <strong>+4,19%</strong>. Dengan baseline ini, surplus pertumbuhan Q1-2025 di atas rata-rata historis dapat dihitung sebagai:</p>
+
+    <div class="formula">
+      <div class="formula-label">Surplus pertumbuhan Q1-2025</div>
+      $$\text{Surplus}_{2025} = 5{,}60\% - 4{,}19\% = +1{,}41 \text{ pp}$$
+    </div>
+
+    <p>Surplus +1,41 pp ini diasumsikan bersumber dari boost diskon listrik Jan-Feb 2025 dan dampak <em>front-loading</em> konsumsi pelanggan prabayar. Pada Q1-2026 tanpa diskon, basis perbandingan Q1-2025 yang elevated menciptakan <em>drag</em> mekanis sebesar −1,41 pp pada pertumbuhan Y-on-Y. Apabila seluruh surplus 2025 sepenuhnya tereversi:</p>
+
+    <div class="formula">
+      <div class="formula-label">Estimasi underlying growth Q1-2026 (surplus decomposition)</div>
+      $$\text{Underlying}_{2026} = -0{,}25\% + 1{,}41 \text{ pp} = +1{,}16\%$$
+    </div>
+
+    <p>Hasil ini menunjukkan bahwa pertumbuhan underlying Ketenagalistrikan Q1-2026, setelah dikoreksi dari efek high base diskon 2025, berada di wilayah positif sekitar <strong>+1,16%</strong> — perlambatan dari rata-rata historis, namun bukan kontraksi.</p>
+
+    <h3>Bukti pendukung: dekorelasi historis Listrik–Manufaktur (2014–2026)</h3>
+    <p>Mengapa pertumbuhan Ketenagalistrikan dapat melemah ke wilayah negatif tanpa indikasi penurunan aktivitas industri? Jawabannya tersedia di data historis. Korelasi antara pertumbuhan Manufaktur dan Ketenagalistrikan Y-on-Y secara historis memang lemah, dan elastisitasnya menurun signifikan pada era hilirisasi (2020–2026). Q1-2026 adalah outlier paling ekstrim dalam seri data 13 tahun.</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Scatter Plot Q1 Manufaktur vs Ketenagalistrikan (2014–2026) dengan Garis Regresi</div>
+      <div class="chart-sub">Elastisitas Listrik terhadap Manufaktur menurun: 1,32 (pre-2020) → 0,41 (post-2020)</div>
+      <div class="chart-wrap tall"><canvas id="chartScatter"></canvas></div>
+      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS PDB Lapangan Usaha Q1 2014–2026</a>. Setiap titik = pengamatan satu kuartal Q1. Sumbu X = pertumbuhan Manufaktur (%), sumbu Y = pertumbuhan Ketenagalistrikan (%). Titik teal = era pre-hilirisasi (2014–2019), titik rust = era hilirisasi/captive boom (2020–2026). Garis regresi menunjukkan kemiringan menurun — artinya, dampak perubahan pertumbuhan Manufaktur ke Listrik PLN semakin kecil. Q1-2026 (titik paling kanan-bawah) adalah outlier paling ekstrim.</div>
+    </div>
+
+    <div class="stat-grid cols-3" style="margin-top: 16px;">
+      <div class="stat-card">
+        <div class="stat-label">Korelasi Pearson 2014–2019</div>
+        <div class="stat-value">r = 0,18</div>
+        <div class="stat-detail">Hubungan lemah</div>
+      </div>
+      <div class="stat-card alert">
+        <div class="stat-label">Elastisitas Pre-2020</div>
+        <div class="stat-value">1,32</div>
+        <div class="stat-detail">1% Δ Manuf → 1,32% Δ Listrik</div>
+      </div>
+      <div class="stat-card alert">
+        <div class="stat-label">Elastisitas Post-2020</div>
+        <div class="stat-value">0,41</div>
+        <div class="stat-detail">Turun 3,2× lebih lemah</div>
+      </div>
+    </div>
+
+    <p>Dekorelasi struktural ini mengonfirmasi bahwa argumen "listrik turun pasti diikuti penurunan manufaktur" tidak didukung oleh data historis. Industri Indonesia secara progresif tidak lagi bergantung pada listrik PLN — penjelasannya akan dibahas di Tes 4 berikutnya.</p>
 
     <div class="verdict strong">
       <div class="verdict-label">Verdict Tes 3</div>
-      <div class="verdict-title">Diskon listrik 2025 + recovery 2024 = high base double-stacked untuk Q1-2026</div>
-      <div class="verdict-body">Q1-2025 Ketenagalistrikan VA elevated +5,60% (vs rata-rata historis +3,87%) karena diskon Jan-Feb mendorong front-loading konsumsi RT. Q1-2024 sudah elevated +7,78% (recovery surge). Q1-2026 (−0,25%) adalah mean-reversion terhadap dua tahun base yang elevated — bukan tanda manufaktur turun. <em>Underlying</em> growth tetap di kisaran +2,5–3%.</div>
+      <div class="verdict-title">Penurunan tipis −0,25% adalah mean-reversion, bukan kontraksi struktural</div>
+      <div class="verdict-body">Dua bukti konvergen: (1) surplus pertumbuhan Q1-2025 sebesar +1,41 pp di atas rata-rata historis bersumber dari diskon listrik dan <em>front-loading</em>; underlying growth Q1-2026 setelah dikoreksi high base adalah +1,16% — masih positif. (2) Korelasi Listrik–Manufaktur historis lemah (r = 0,18), dan elastisitas menurun 3,2× pada era hilirisasi. Q1-2026 adalah outlier yang konsisten dengan tesis dekorelasi.</div>
     </div>
   </section>
 
   <!-- ========== BAGIAN 06: TES 4 — INDUSTRI TUMBUH, LISTRIK TURUN ========== -->
   <section id="tes-4">
     <div class="section-number">Bagian 06 — Tes empiris 4</div>
-    <h2 class="section-title">Tes 4 — Industri tumbuh, listrik PLN turun. <em>Kenapa?</em></h2>
-    <p class="lead">Pertanyaan sederhana, jawaban sederhana: <strong>karena industri makin pakai listrik produksi sendiri (captive power), bukan beli ke PLN.</strong> Lima bukti berikut menunjukkan ini bukan hipotesis baru — sudah pola struktural sejak lama, dan akselerasi dramatis dalam 5 tahun terakhir.</p>
+    <h2 class="section-title">Tes 4 — Mengapa Manufaktur Tumbuh Meski Konsumsi Listrik PLN Turun?</h2>
+    <p class="lead">Penjelasan empirisnya adalah: industri Indonesia semakin banyak memproduksi listrik secara mandiri (captive power), bukan membelinya dari PLN. Berikut tiga bukti empiris utama yang menunjukkan bahwa fenomena ini bukan hipotesis baru — melainkan pola struktural yang telah berlangsung sejak setidaknya 2016, dan mengalami akselerasi dramatis dalam lima tahun terakhir.</p>
 
     <h3>Bukti 1 — Konsumen utama listrik PLN bukan industri pengolahan (IO BPS 2016)</h3>
     <p>Asumsi LPEM "kalau listrik turun, manufaktur ikut turun" mengandaikan industri pengolahan adalah konsumen utama listrik PLN. Faktanya tidak. Tabel Input-Output BPS 2016 (52 industri) menunjukkan distribusi output Ketenagalistrikan (I-28):</p>
@@ -792,27 +907,17 @@
     </div>
 
     <div class="insight-box">
-      <strong>Implikasi:</strong> kalau diskon listrik 2025 mendorong RT konsumsi melonjak +5% di Q1-2025 (high base), lalu Q1-2026 normalisasi turun ~3-5%, dampak ke output Ketenagalistrikan langsung: <strong>−0,4 sampai −0,7 pp</strong>. Cukup untuk menjelaskan observed −0,25% — tanpa industri perlu turun. <em>RT cukup berpengaruh dibanding industri.</em>
+      <strong>Implikasi:</strong> Jika diskon listrik Jan-Feb 2025 meningkatkan konsumsi RT pada Q1-2025 sehingga surplus pertumbuhan menjadi +1,41 pp di atas rata-rata historis (dibahas di Tes 3), maka Q1-2026 yang kehilangan boost tersebut menghasilkan <em>drag</em> mekanis sekitar −1,41 pp pada Y-on-Y growth. Mengingat bobot RT yang besar pada konsumsi listrik PLN (14,75% vs Manuf 9,81%), pergeseran konsumsi RT cukup signifikan untuk menjelaskan kontraksi −0,25% Ketenagalistrikan — tanpa memerlukan asumsi penurunan pada sektor industri.
     </div>
 
-    <h3>Bukti 2 — Industri padat listrik beli bahan bakar 2-11× lebih banyak dari listrik PLN (IO BPS 2016)</h3>
-    <p>Industri yang seharusnya paling padat listrik — semen, smelter, kimia, kertas — justru membeli batubara, migas, dan BBM dalam jumlah jauh lebih besar dari listrik PLN. Bahan bakar ini sebagian untuk proses (kiln semen, blast furnace baja), tapi mayoritas untuk pembangkit listrik captive sendiri.</p>
+    <p>Bukti pendukung dari tabel IO yang sama: industri padat listrik (semen, smelter, kimia, kertas) secara historis membeli bahan bakar dalam jumlah jauh lebih besar dibandingkan listrik PLN — rasio 2-11× lipat. Industri Kimia membeli bahan bakar 11,17× lebih banyak dari listrik PLN, Industri Semen 4,85×, Industri Logam Dasar (smelter) 2,47×, dan Industri Kertas 2,11×. Pola pembelian energi ini mengindikasikan bahwa sebagian besar bahan bakar dialokasikan untuk pembangkit listrik captive internal, bukan hanya untuk proses produksi langsung. Selain itu, dari seluruh batubara yang dijual untuk konsumsi domestik intermediate di 2016: 56,6% diserap PLN, sedangkan 43,4% diserap industri sendiri — terutama I-21 Industri Semen (16,6%), I-19 Kimia (5,2%), I-22 Logam Dasar (3,0%), dan I-18 Kertas (3,0%). Sumber: <a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS Tabel IO 2016</a>. Pola ini telah berlangsung sejak 2016 — sebelum captive boom — dan terus mengakselerasi.</p>
 
-    <div class="chart-card">
-      <div class="chart-title">Rasio Pembelian Bahan Bakar / Listrik PLN per Industri Padat Energi (IO 2016)</div>
-      <div class="chart-sub">Rasio &gt; 1 = sinyal captive power. Semua industri padat listrik melebihi 2×.</div>
-      <div class="chart-wrap"><canvas id="chartBahanBakar"></canvas></div>
-      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS Tabel IO 2016</a>. Bahan bakar = batubara + migas mentah + BBM olahan + gas. Industri Logam Dasar (smelter aluminium/baja/nikel) beli listrik PLN hanya 2,35% dari output — padahal smelter internasional listriknya 30-40% dari biaya operasi. Selisih = captive sendiri.</div>
-    </div>
-
-    <p>Dan dari semua batubara yang dijual untuk konsumsi domestik intermediate di 2016: <strong>56,6% ke PLN, 43,4% ke industri sendiri</strong> (terutama I-21 Semen 16,6%, I-19 Kimia 5,2%, I-22 Logam Dasar 3,0%, I-18 Kertas 3,0%) — <a href="https://www.bps.go.id/id/statistics-table/1/MjEyMyMx/tabel-input-output-indonesia-transaksi-domestik-atas-dasar-harga-produsen-52-industri-2016-juta-rupiah-.html" target="_blank">BPS Tabel IO 2016</a>. Sudah di 2016 — sebelum captive boom — hampir setengah batubara industri ke captive sendiri.</p>
-
-    <h3>Bukti 3 — Kapasitas captive tumbuh 2× lipat dalam 5 tahun (IESR 2026)</h3>
-    <p>Tren yang sudah ada sejak 2016 berakselerasi dramatis dalam lima tahun terakhir, didorong hilirisasi nikel dan baja. Data CREA-GEM dan IESR mencatat trajectory tahunan kapasitas PLTU captive batubara:</p>
+    <h3>Bukti 2 — Kapasitas captive tumbuh 2× lipat dalam 5 tahun (IESR 2026)</h3>
+    <p>Tren struktural yang telah berlangsung sejak 2016 mengalami akselerasi dramatis dalam lima tahun terakhir, didorong program hilirisasi nikel dan baja. Data CREA-GEM dan IESR mencatat trajectory tahunan kapasitas pembangkit captive:</p>
 
     <div class="chart-card">
       <div class="chart-title">Kapasitas Pembangkit Captive Indonesia, 2019 → 2025 (PLTU Batubara) + Total 2024</div>
-      <div class="chart-sub">PLTU captive batubara: 5,5 GW (2019) → 19,3 GW (2025). Total semua jenis: 14 GW → 33 GW.</div>
+      <div class="chart-sub">PLTU captive batubara: 5,7 GW (2019) → 19,3 GW (2025). Total semua jenis: 14 GW → 33 GW.</div>
       <div class="chart-wrap tall"><canvas id="chartCaptive"></canvas></div>
       <div class="chart-note">Sumber: <a href="https://iesr.or.id/lembar-fakta-pembangkit-listrik-captive/" target="_blank">IESR Lembar Fakta Captive (Feb 2026)</a> untuk total captive 2019 (14 GW) dan 2024 (33 GW). <a href="https://energyandcleanair.org/wp/wp-content/uploads/2024/11/ID-Press-release_Indonesia-Captive-Briefing-2024-update.pdf" target="_blank">CREA-GEM "Tracing Indonesia's captive power growth"</a> (November 2024) untuk PLTU batubara captive Juli 2019 (5,7 GW), Juli 2023 (10,7 GW), Juli 2024 (15,2 GW), proyeksi akhir 2024 (17,1 GW). <a href="https://www.kabarbursa.com/ekonomi-hijau/crea-ungkap-adanya-lonjakan-pltu-captive-di-balik-hilirisasi" target="_blank">Update CREA-GEM Januari 2026</a>: PLTU captive 2025 = 19,3 GW. Per ESDM 2025, total kapasitas nasional 107 GW — captive + non-PLN 24,5%.</div>
     </div>
@@ -840,8 +945,8 @@
       </div>
     </div>
 
-    <h3>Bukti 4 — Math: 85% pertumbuhan kebutuhan listrik industri 2019–2024 dipenuhi captive</h3>
-    <p>Pakai formula sederhana dan data lapangan untuk kuantifikasi: berapa persen <em>tepatnya</em> dari pertumbuhan kebutuhan listrik industri yang dipenuhi captive vs PLN?</p>
+    <h3>Bukti 3 — Math: 85% pertumbuhan kebutuhan listrik industri 2019–2024 dipenuhi captive</h3>
+    <p>Bukti final adalah pengukuran kuantitatif langsung. Menggunakan formula sederhana dan data lapangan, kita dapat menghitung secara <em>tepat</em> berapa persen dari pertumbuhan kebutuhan listrik industri dipenuhi captive versus PLN.</p>
 
     <div class="formula">
       <div class="formula-label">Persamaan keseimbangan listrik industri</div>
@@ -906,8 +1011,8 @@
       </p>
     </div>
 
-    <h4>🎯 Dashboard Interaktif — Captive Calculator</h4>
-    <p>Skeptis dengan asumsi CF 50%? Mainkan slider di bawah — di rentang 20-80%, share captive tetap 70-90%. Kesimpulan robust.</p>
+    <h4>Kalkulator Robustness — Sensitivitas Terhadap Asumsi Capacity Factor</h4>
+    <p>Pembaca yang skeptis terhadap asumsi capacity factor (CF) sebesar 50% dapat melakukan uji sensitivitas dengan menggeser slider di bawah. Pada rentang CF 20-80% yang masuk akal, share captive dalam penambahan kebutuhan listrik industri tetap berada di kisaran 70-90% — kesimpulan terbukti robust.</p>
 
     <div class="widget">
       <div class="widget-label">Live Energy Balance Calculator</div>
@@ -986,27 +1091,20 @@
       </div>
 
       <div class="insight-box">
-        <strong>Robustness check:</strong> CF 20% (sangat konservatif) → share captive <strong>70%</strong>. CF 70% (sangat agresif) → share captive <strong>89%</strong>. Tidak ada CF wajar di mana PLN jadi sumber utama penambahan kebutuhan listrik industri.
+        <strong>Robustness check:</strong> CF 20% (sangat konservatif) → share captive <strong>70%</strong>. CF 70% (sangat agresif) → share captive <strong>89%</strong>. Tidak terdapat asumsi CF yang masuk akal di mana PLN menjadi sumber utama penambahan kebutuhan listrik industri.
       </div>
     </div>
 
-    <h3>Bukti 5 — Decoupling visible di data BPS 2014–2026</h3>
-    <p>Kalau industri makin pakai captive, kita seharusnya melihat hubungan yang makin renggang antara growth Ketenagalistrikan (PLN/IPP yang terjual) dan growth Manufaktur (output industri total, termasuk captive). Data BPS time series memperlihatkan persis pola ini, dan Q1-2026 adalah outlier unprecedented:</p>
+    <h4>Catatan: konsistensi hasil dengan periode 2019–2025</h4>
+    <p>Tabel utama menggunakan rentang 2019–2024 karena IESR menyediakan angka resmi total captive (semua jenis) untuk kedua endpoint tersebut. Apabila perhitungan diperluas hingga 2025 menggunakan data PLN industri terbaru (<a href="https://web.pln.co.id/media/siaran-pers/2026/02/konsumsi-listrik-nasional-tumbuh-pln-catat-penjualan-31769-twh-di-2025" target="_blank">93,35 TWh, PLN siaran pers 1 Feb 2026</a>) dan estimasi captive total ~37 GW (ekstrapolasi linear dari trajectory IESR), maka share captive dalam penambahan kebutuhan listrik industri menjadi <strong>86,0%</strong>. Hasil konsisten dengan periode utama — tesis 85% terbukti robust di berbagai rentang waktu dan asumsi metodologis.</p>
 
-    <div class="chart-card">
-      <div class="chart-title">Q1 Y-on-Y Growth: Ketenagalistrikan vs Industri Pengolahan, 2014–2026</div>
-      <div class="chart-sub">Historis: bergerak bersama. 2026: gap +5,29 pp — terbesar dalam 13 tahun.</div>
-      <div class="chart-wrap tall"><canvas id="chartDecoupling"></canvas></div>
-      <div class="chart-note">Sumber: <a href="https://www.bps.go.id/id/pressrelease/2026/05/05/2575/ekonomi-indonesia-triwulan-i-2026-tumbuh-5-61-persen--y-on-y-.html" target="_blank">BPS Berita Resmi Statistik Q1-2026</a> dan PDB Lapangan Usaha Seri 2010. Rata-rata gap 2014–2023: ±1-2 pp. Q1-2026: Manuf +5,04%, Listrik −0,25%, gap +5,29 pp — outlier 13 tahun.</div>
-    </div>
-
-    <h3>Catatan teknis: kenapa VA captive tidak masuk Sektor D</h3>
-    <p>Per <em>System of National Accounts 2008</em> yang dipakai BPS, listrik yang diproduksi industri untuk konsumsi sendiri (<em>non-market output</em>) mengikuti <strong>principal activity rule</strong>: nilai tambahnya tercatat di sektor industri utama (manufaktur, pertambangan), bukan di Sektor D. Ketika pabrik nikel Morowali bakar batubara 6 GW untuk smelter sendiri, VA-nya masuk Sektor C Industri Pengolahan — bukan Sektor D Pengadaan Listrik. Inilah mengapa Sektor D bisa stagnan sementara Sektor C tetap tumbuh.</p>
+    <h3>Catatan teknis: mengapa VA captive tidak tercatat di Sektor D</h3>
+    <p>Berdasarkan <em>System of National Accounts 2008</em> yang diadopsi BPS, listrik yang diproduksi industri untuk konsumsi internal (<em>non-market output</em>) mengikuti <strong>principal activity rule</strong>: nilai tambah tercatat di sektor industri utama (Manufaktur, Pertambangan), bukan di Sektor D. Ketika pabrik nikel Morowali membakar batubara 6 GW untuk smelter sendiri, VA-nya masuk ke Sektor C Industri Pengolahan — bukan Sektor D Pengadaan Listrik. Inilah penjelasan teknis mengapa Sektor D dapat mengalami stagnasi sementara Sektor C tetap mengalami ekspansi.</p>
 
     <div class="verdict strong">
       <div class="verdict-label">Verdict Tes 4</div>
-      <div class="verdict-title">YA — industri tumbuh karena listriknya dari captive, bukan PLN</div>
-      <div class="verdict-body">Lima bukti konvergen: (1) listrik PLN didominasi RT bukan industri (IO 2016: 14,75% vs 9,81%), (2) industri padat listrik historically beli bahan bakar 2-11× lebih banyak dari listrik PLN, (3) kapasitas captive 14 → 33 GW dalam 5 tahun, (4) 85% pertumbuhan kebutuhan listrik industri 2019-2024 dari captive (robust di CF 20-80%), (5) gap Q1 Listrik-Manuf 2026 +5,29 pp terbesar dalam 13 tahun. Sektor D −0,25% sama sekali tidak kontradiksi dengan Sektor C +5,04% — justru konsekuensi struktur ekonomi listrik Indonesia.</div>
+      <div class="verdict-title">Manufaktur tetap tumbuh karena listrik dipasok dari captive power, bukan PLN</div>
+      <div class="verdict-body">Tiga bukti konvergen: (1) Struktural — listrik PLN didominasi rumah tangga (14,75%), bukan industri pengolahan (9,81%); industri padat listrik historically membeli bahan bakar 2-11× lebih banyak dari listrik PLN untuk pembangkit captive sendiri. (2) Magnitude — kapasitas captive total tumbuh dari 14 GW (2019) menjadi 33 GW (2024), PLTU batubara captive mencapai 19,3 GW di 2025. (3) Kuantitatif — formula neraca energi menunjukkan 85,5% pertumbuhan kebutuhan listrik industri 2019-2024 dipenuhi captive, dengan hasil robust pada CF 20-80% dan periode 2019-2025 (86,0%). Kontraksi −0,25% pada Sektor D tidak kontradiksi dengan ekspansi +5,04% pada Sektor C — melainkan konsekuensi struktur ekonomi listrik Indonesia.</div>
     </div>
   </section>
 
@@ -1048,15 +1146,16 @@
 
     <p><strong>Ketiga, indikator independen kompak menunjukkan manufaktur memang tumbuh.</strong> IKBM 51,37 (ekspansi), PMI BI 52,03, impor bahan baku primer +31,77%, PMTB mesin +10,78%, dan PLN industrial sales 2025 +2,5%. Tidak ada satu pun indikator independen yang mendukung skenario LPEM "manufaktur tumbuh 1,5%" atau "−6%".</p>
 
-    <p><strong>Keempat, bukti kuantitatif dari struktur dan neraca listrik industri.</strong> Tabel Input-Output BPS 2016 menunjukkan listrik PLN didominasi rumah tangga (14,75%), bukan industri pengolahan (9,81%) — kalau RT turun karena hilangnya diskon 2025, sektor D turun tanpa industri perlu turun. Plus industri padat listrik (semen, smelter, kimia) historically membeli bahan bakar 2-11× lebih banyak dari listrik PLN — untuk pembangkit captive sendiri. Aplikasi formula $E_{industri} = E_{PLN} + E_{captive}$ pada data 2019–2024 (PLN + IESR) menghasilkan: dari 97,3 TWh penambahan kebutuhan listrik industri lima tahun terakhir, <strong>85,5% datang dari captive power</strong>. Robust di CF 20-80%. Kalau LPEM mengukur aktivitas industri lewat lensa konsumsi PLN saja, dia melihat kurang dari 15% dari realitas.</p>
+    <p><strong>Keempat, bukti kuantitatif dari struktur dan neraca listrik industri.</strong> Tabel Input-Output BPS 2016 menunjukkan bahwa konsumen utama listrik PLN adalah rumah tangga (14,75%), bukan industri pengolahan (9,81%) — sehingga ketika konsumsi rumah tangga menurun pasca-berakhirnya diskon listrik 2025, sektor D dapat mengalami kontraksi tanpa industri harus turun. Selain itu, industri padat listrik (semen, logam dasar, kimia) secara historis membeli bahan bakar 2–11× lebih banyak dibandingkan listrik PLN, yang mengindikasikan keberadaan pembangkit captive sendiri. Aplikasi formula $E_{industri} = E_{PLN} + E_{captive}$ pada data 2019–2024 (PLN + IESR) menghasilkan temuan: dari 97,3 TWh penambahan kebutuhan listrik industri lima tahun terakhir, <strong>85,5% berasal dari captive power</strong>. Hasil ini robust pada rentang capacity factor 20-80%. Konsekuensinya, pengukuran aktivitas industri yang hanya berbasis konsumsi listrik PLN akan menghasilkan estimasi yang menyesatkan — kurang dari 15% realitas yang sebenarnya.</p>
 
     <div class="key-result">
       <div class="key-result-label">Kesimpulan akhir</div>
       <p style="font-family: var(--font-display); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--cream); max-width: none;">
-        Rilis BPS 5,61% adalah hasil aritmetika yang dapat ditelusuri dari level VA eksak.<br/>
+        Rilis BPS 5,61% merupakan hasil agregasi nilai tambah sektoral<br/>
+        yang dapat ditelusuri secara matematis dari data sektor masing-masing.<br/>
         Kritik LPEM bertumpu pada premis empiris yang keliru —<br/>
-        <strong style="color: #B5D27A;">85,5%</strong> pertumbuhan kebutuhan listrik industri datang dari captive,<br/>
-        dan indikator independen manufaktur kompak menunjukkan ekspansi.
+        <strong style="color: #B5D27A;">85,5%</strong> pertumbuhan kebutuhan listrik industri dipenuhi captive power,<br/>
+        sedangkan seluruh indikator independen manufaktur secara konsisten menunjukkan ekspansi.
       </p>
     </div>
   </section>
@@ -1240,15 +1339,32 @@ window.addEventListener('load', function() {
     data: {
       labels: ['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
       datasets: [
-        { label: 'Ketenagalistrikan', data: [2.91,3.79,8.56,1.73,3.50,5.72,4.17,1.65,8.09,2.01,7.78,5.60,-0.25],
+        { label: 'Ketenagalistrikan (listrik PLN/IPP terjual)', data: [2.91,3.79,8.56,1.73,3.50,5.72,4.17,1.65,8.09,2.01,7.78,5.60,-0.25],
           borderColor: '#9C5A3F', backgroundColor: '#9C5A3F', tension: 0.2, pointRadius: 4, pointHoverRadius: 6 },
-        { label: 'Pengadaan Gas', data: [5.30,-8.95,1.26,0.77,2.04,-6.22,1.55,1.92,-0.82,8.03,-13.34,0.49,-8.49],
+        { label: 'Pengadaan Gas (gas alam distribusi PGN)', data: [5.30,-8.95,1.26,0.77,2.04,-6.22,1.55,1.92,-0.82,8.03,-13.34,0.49,-8.49],
           borderColor: '#6D6760', backgroundColor: '#6D6760', tension: 0.2, pointRadius: 4, pointHoverRadius: 6, borderDash: [4,4] },
-        { label: 'Sektor D Total', data: [3.29,1.73,7.50,1.60,3.31,4.12,3.85,1.68,7.04,2.67,5.35,5.11,-0.99],
+        { label: 'Sektor D Total (Listrik 90,96% + Gas 9,04%)', data: [3.29,1.73,7.50,1.60,3.31,4.12,3.85,1.68,7.04,2.67,5.35,5.11,-0.99],
           borderColor: '#1A1815', backgroundColor: '#1A1815', tension: 0.2, pointRadius: 3 }
       ]
     },
-    options: { ...commonOpts, scales: { ...commonOpts.scales, y: { ...commonOpts.scales.y, ticks: { ...commonOpts.scales.y.ticks, callback: v => v + '%' } } } }
+    options: { ...commonOpts,
+      plugins: { ...commonOpts.plugins,
+        tooltip: { ...commonOpts.plugins.tooltip,
+          callbacks: {
+            label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y >= 0 ? '+' : '') + ctx.parsed.y.toFixed(2) + '%',
+            afterBody: items => {
+              if (items.length > 0 && items[0].label === '2026') {
+                return ['', 'Catatan: Ketenagalistrikan dan Pengadaan Gas adalah dua sub-sektor terpisah.',
+                       'Ketenagalistrikan = listrik PLN dan IPP yang dijual ke pelanggan.',
+                       'Pengadaan Gas = distribusi gas alam (mayoritas PGN ke industri).'];
+              }
+              return [];
+            }
+          }
+        }
+      },
+      scales: { ...commonOpts.scales, y: { ...commonOpts.scales.y, ticks: { ...commonOpts.scales.y.ticks, callback: v => v + '%' } } }
+    }
   });
 
   // Chart Q1 Ketenagalistrikan VA Growth (Bagian 05) — Q1 hanya, 2018-2026
@@ -1319,43 +1435,6 @@ window.addEventListener('load', function() {
     }
   });
 
-  // Chart Bahan Bakar — rasio bahan bakar/listrik PLN per industri padat energi (IO 2016)
-  new Chart(document.getElementById('chartBahanBakar'), {
-    type: 'bar',
-    data: {
-      labels: [
-        'I-19 Kimia',
-        'I-21 Semen/Galian',
-        'I-22 Logam Dasar (smelter)',
-        'I-18 Kertas'
-      ],
-      datasets: [
-        {
-          label: '% Listrik PLN dari output',
-          data: [1.06, 3.12, 2.35, 0.95],
-          backgroundColor: '#4B7B6A',
-          borderRadius: 4
-        },
-        {
-          label: '% Bahan Bakar (batubara+migas+BBM+gas) dari output',
-          data: [11.88, 15.15, 5.81, 2.01],
-          backgroundColor: '#9C5A3F',
-          borderRadius: 4
-        }
-      ]
-    },
-    options: { ...commonOpts,
-      indexAxis: 'y',
-      plugins: { ...commonOpts.plugins,
-        tooltip: { ...commonOpts.plugins.tooltip,
-          callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.parsed.x.toFixed(2) + '%' } } },
-      scales: {
-        x: { grid: { color: '#E8E1D2' }, ticks: { font: { family: 'JetBrains Mono', size: 11 }, callback: v => v + '%' } },
-        y: { grid: { display: false }, ticks: { font: { family: 'JetBrains Mono', size: 11 } } }
-      }
-    }
-  });
-
   // Chart Captive Power yearly 2019-2025
   new Chart(document.getElementById('chartCaptive'), {
     type: 'bar',
@@ -1406,40 +1485,162 @@ window.addEventListener('load', function() {
     }
   });
 
-  // Chart 7 (NEW): Decoupling — Q1 Ketenagalistrikan vs Manufaktur VA Growth 2014-2026
-  new Chart(document.getElementById('chartDecoupling'), {
-    type: 'line',
+  // Chart Pangsa Sektor — pie/doughnut showing PDB share by sector (top 8 + others)
+  new Chart(document.getElementById('chartPangsa'), {
+    type: 'bar',
     data: {
-      labels: ['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
+      labels: [
+        'C — Industri Pengolahan',
+        'G — Perdagangan',
+        'A — Pertanian',
+        'F — Konstruksi',
+        'B — Pertambangan',
+        'H — Transportasi & Pergudangan',
+        'J — Informasi & Komunikasi',
+        'K — Jasa Keuangan',
+        'D — Pengadaan Listrik & Gas',
+        'Sektor lain (9 sektor)'
+      ],
+      datasets: [{
+        label: 'Pangsa terhadap PDB ADHK (%)',
+        data: [20.45, 13.16, 12.51, 9.94, 8.49, 5.45, 5.20, 4.18, 1.05, 19.57],
+        backgroundColor: (ctx) => {
+          const i = ctx.dataIndex;
+          if (i === 0) return '#9C5A3F';  // Manufaktur - highlight
+          if (i === 8) return '#B8893A';  // Sektor D - highlight
+          return '#6D6760';
+        },
+        borderRadius: 4
+      }]
+    },
+    options: { ...commonOpts,
+      indexAxis: 'y',
+      plugins: { ...commonOpts.plugins,
+        legend: { display: false },
+        tooltip: { ...commonOpts.plugins.tooltip,
+          callbacks: {
+            label: ctx => ctx.parsed.x.toFixed(2) + '% dari PDB total',
+            afterLabel: ctx => {
+              if (ctx.dataIndex === 0) return 'Pertumbuhan Q1-2026: +5,04% → kontribusi +1,03 pp';
+              if (ctx.dataIndex === 8) return 'Pertumbuhan Q1-2026: −0,99% → kontribusi −0,01 pp';
+              return '';
+            }
+          } }
+      },
+      scales: {
+        x: { grid: { color: '#E8E1D2' }, ticks: { font: { family: 'JetBrains Mono', size: 11 }, callback: v => v + '%' } },
+        y: { grid: { display: false }, ticks: { font: { family: 'JetBrains Mono', size: 11 } } }
+      }
+    }
+  });
+
+  // Chart Scatter — Decorrelation Manuf vs Listrik with regression lines
+  const yearLabels = ['Q1-2014','Q1-2015','Q1-2016','Q1-2017','Q1-2018','Q1-2019',
+                       'Q1-2020','Q1-2021','Q1-2022','Q1-2023','Q1-2024','Q1-2025','Q1-2026'];
+  const preData = [
+    {x: 4.45, y: 2.91, year: 'Q1-2014'},
+    {x: 4.07, y: 3.79, year: 'Q1-2015'},
+    {x: 4.68, y: 8.56, year: 'Q1-2016'},
+    {x: 4.28, y: 1.73, year: 'Q1-2017'},
+    {x: 4.61, y: 3.50, year: 'Q1-2018'},
+    {x: 3.85, y: 5.72, year: 'Q1-2019'}
+  ];
+  const postData = [
+    {x: 2.06, y: 4.17, year: 'Q1-2020'},
+    {x: -1.38, y: 1.65, year: 'Q1-2021'},
+    {x: 5.07, y: 8.09, year: 'Q1-2022'},
+    {x: 4.43, y: 2.01, year: 'Q1-2023'},
+    {x: 4.13, y: 7.78, year: 'Q1-2024'},
+    {x: 4.55, y: 5.60, year: 'Q1-2025'},
+    {x: 5.04, y: -0.25, year: 'Q1-2026'}
+  ];
+
+  // Regression lines: Listrik = a + b × Manuf
+  // Pre-2020: y = -1.35 + 1.32x; Post-2020: y = 2.77 + 0.41x
+  const preLine = [
+    {x: -2, y: -1.35 + 1.32 * -2},
+    {x: 6, y: -1.35 + 1.32 * 6}
+  ];
+  const postLine = [
+    {x: -2, y: 2.77 + 0.41 * -2},
+    {x: 6, y: 2.77 + 0.41 * 6}
+  ];
+
+  new Chart(document.getElementById('chartScatter'), {
+    type: 'scatter',
+    data: {
       datasets: [
         {
-          label: 'Ketenagalistrikan VA (Q1 YoY)',
-          data: [2.91,3.79,8.56,1.73,3.50,5.72,4.17,1.65,8.09,2.01,7.78,5.60,-0.25],
-          borderColor: '#9C5A3F',
-          backgroundColor: '#9C5A3F',
-          tension: 0.2,
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          borderWidth: 2.5
+          label: 'Pre-2020 (2014–2019, era PLN-dominant)',
+          data: preData,
+          backgroundColor: '#4B7B6A',
+          pointRadius: 7,
+          pointHoverRadius: 10,
+          borderColor: '#FFFFFF',
+          borderWidth: 1
         },
         {
-          label: 'Industri Pengolahan VA (Q1 YoY)',
-          data: [4.45,4.07,4.68,4.28,4.61,3.85,2.06,-1.38,5.07,4.43,4.13,4.55,5.04],
+          label: 'Post-2020 (2020–2026, era hilirisasi & captive)',
+          data: postData,
+          backgroundColor: '#9C5A3F',
+          pointRadius: 7,
+          pointHoverRadius: 10,
+          borderColor: '#FFFFFF',
+          borderWidth: 1
+        },
+        {
+          label: 'Regresi Pre-2020: Listrik = −1,35 + 1,32 × Manuf',
+          type: 'line',
+          data: preLine,
           borderColor: '#4B7B6A',
-          backgroundColor: '#4B7B6A',
-          tension: 0.2,
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          borderWidth: 2.5
+          backgroundColor: 'transparent',
+          borderDash: [4, 4],
+          borderWidth: 1.5,
+          pointRadius: 0,
+          tension: 0,
+          showLine: true
+        },
+        {
+          label: 'Regresi Post-2020: Listrik = +2,77 + 0,41 × Manuf',
+          type: 'line',
+          data: postLine,
+          borderColor: '#9C5A3F',
+          backgroundColor: 'transparent',
+          borderDash: [4, 4],
+          borderWidth: 1.5,
+          pointRadius: 0,
+          tension: 0,
+          showLine: true
         }
       ]
     },
     options: { ...commonOpts,
       plugins: { ...commonOpts.plugins,
+        legend: { display: true, position: 'bottom',
+          labels: { font: { family: 'JetBrains Mono', size: 10 }, padding: 8, boxWidth: 12 } },
         tooltip: { ...commonOpts.plugins.tooltip,
-          callbacks: { label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y >= 0 ? '+' : '') + ctx.parsed.y.toFixed(2) + '%' } } },
-      scales: { ...commonOpts.scales,
-        y: { ...commonOpts.scales.y, ticks: { ...commonOpts.scales.y.ticks, callback: v => (v >= 0 ? '+' : '') + v + '%' } }
+          callbacks: {
+            title: ctx => ctx[0].raw.year || '',
+            label: ctx => {
+              if (!ctx.raw.year) return '';
+              return 'Manuf: ' + (ctx.parsed.x >= 0 ? '+' : '') + ctx.parsed.x.toFixed(2) + '%, Listrik: ' + (ctx.parsed.y >= 0 ? '+' : '') + ctx.parsed.y.toFixed(2) + '%';
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          title: { display: true, text: 'Pertumbuhan Manufaktur Q1 (%)', font: { family: 'JetBrains Mono', size: 11 } },
+          grid: { color: '#E8E1D2' },
+          ticks: { font: { family: 'JetBrains Mono', size: 11 }, callback: v => (v >= 0 ? '+' : '') + v + '%' }
+        },
+        y: {
+          type: 'linear',
+          title: { display: true, text: 'Pertumbuhan Ketenagalistrikan Q1 (%)', font: { family: 'JetBrains Mono', size: 11 } },
+          grid: { color: '#E8E1D2' },
+          ticks: { font: { family: 'JetBrains Mono', size: 11 }, callback: v => (v >= 0 ? '+' : '') + v + '%' }
+        }
       }
     }
   });
